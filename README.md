@@ -65,6 +65,18 @@ python analyze_cases.py
 
 These commands reuse stored real answering-model observations and saved risk models; verification/evaluation does not need a cloud API key or new language-model calls. Replaying a cached dataset is a reproducibility check, not a new independent statistical experiment.
 
+The complete frozen replay was tested on Windows. Some original frozen JSON manifests contain Windows backslashes in their `files_sha256` path keys; native Linux/macOS `Path` does not interpret those as directory separators. On Linux or macOS, run the same preserved scripts through the limited compatibility wrapper, from `experiments/v3`:
+
+```sh
+python ../../tools/run_frozen.py audit_sources.py
+python ../../tools/run_frozen.py verify_v3.py
+python ../../tools/run_frozen.py train_v3.py evaluate
+python ../../tools/run_frozen.py build_v3_summary.py
+python ../../tools/run_frozen.py analyze_cases.py
+```
+
+The wrapper changes only the keys of a top-level `files_sha256` mapping after JSON decoding, in memory. It preserves file bytes, digest values, contexts, scores and neural logic. It leaves Windows decoding unchanged by default. Its standard-library assertions can be run with `python -m unittest discover -s tools -p "test_run_frozen.py" -v` from the repository root. These tests exercise the path shim, not a full Linux/macOS model replay; cross-platform library and rendering compatibility is not guaranteed by this shim.
+
 All old code and manifest hashes are preserved. Keep file bytes unchanged; `.gitattributes` disables Git line-ending normalization so that checkout does not break the frozen SHA-256 checks. Rebuilding reports can change presentation-only prose or layout, but must not change the frozen models, inputs or selected thresholds.
 
 The `run_local.ps1` convenience scripts preserve paths from the original Windows machine and are historical machine-specific helpers. For another machine, use the portable Python commands above after installing the requirements. They do not require the original machine's directory structure.

@@ -9,3 +9,5 @@ Thumbs.db
 reports/qa/
 reports/rendered/
 tmp/
+~$*
+*.tmp

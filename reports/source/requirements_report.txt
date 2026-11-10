@@ -1,0 +1,6 @@
+# Document and scientific-figure generation only; use experiment requirements for training/replay.
+python-docx==1.2.0
+reportlab>=4,<5
+Pillow>=10,<14
+# Also required: Node.js with sharp; Windows Microsoft Word for native PDF export.
+# For optional page-image QA: Poppler pdftoppm.

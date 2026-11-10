@@ -1,0 +1,8 @@
+[
+  "[1] Y. Li, B. Dong, F. Guerin, and C. Lin, \"Compressing Context to Enhance Inference Efficiency of Large Language Models,\" in Proc. EMNLP, pp. 6342-6353, 2023. doi: 10.18653/v1/2023.emnlp-main.391.",
+  "[2] H. Jiang, Q. Wu, C.-Y. Lin, Y. Yang, and L. Qiu, \"LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models,\" in Proc. EMNLP, pp. 13358-13376, 2023. doi: 10.18653/v1/2023.emnlp-main.825.",
+  "[3] Z. Pan et al., \"LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression,\" in Findings ACL, pp. 963-981, 2024. doi: 10.18653/v1/2024.findings-acl.57.",
+  "[4] Y. Geifman and R. El-Yaniv, \"SelectiveNet: A Deep Neural Network with an Integrated Reject Option,\" in Proc. ICML, PMLR, vol. 97, pp. 2151-2159, 2019. https://proceedings.mlr.press/v97/geifman19a.html.",
+  "[5] B. Hui et al., \"Qwen2.5-Coder Technical Report,\" arXiv:2409.12186, 2024. https://arxiv.org/abs/2409.12186.",
+  "[6] OpenAI, \"Codex,\" software, accessed Nov. 11, 2026. [Online]. Available: https://openai.com/codex/."
+]

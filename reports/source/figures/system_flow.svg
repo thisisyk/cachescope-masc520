@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="250" height="177" preserveAspectRatio="xMinYMin meet" viewBox="0 0 250 177" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="250" height="177"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-177)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="4" y="147" width="242" height="26" style="stroke: rgb(55%,58%,61%); stroke-linecap: butt; stroke-width: 0.65; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="69.303662109375" y="157.0" style="font-family: Arial; font-size: 8.6px;fill: rgb(6%,6%,6%); stroke:none;" transform="translate(0,314) scale(1,-1)">Original context and question</text>
+			<rect x="4" y="113" width="242" height="26" style="stroke: rgb(55%,58%,61%); stroke-linecap: butt; stroke-width: 0.65; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="64.520751953125" y="123.0" style="font-family: Arial; font-size: 8.6px;fill: rgb(6%,6%,6%); stroke:none;" transform="translate(0,246) scale(1,-1)">Fixed 60% and 30% candidates</text>
+			<rect x="4" y="73" width="242" height="32" style="stroke: rgb(55%,58%,61%); stroke-linecap: butt; stroke-width: 0.65; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="54.493017578125006" y="90.8" style="font-family: Arial; font-size: 8.6px;fill: rgb(6%,6%,6%); stroke:none;" transform="translate(0,181) scale(1,-1)">Pre-answer features and learned risk</text>
+			<text x="70.27158203125" y="81.2" style="font-family: Arial; font-size: 8.6px;fill: rgb(6%,6%,6%); stroke:none;" transform="translate(0,162) scale(1,-1)">Optional JSON syntax check</text>
+			<rect x="4" y="37" width="242" height="28" style="stroke: rgb(55%,58%,61%); stroke-linecap: butt; stroke-width: 0.65; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="74.561083984375" y="52.8" style="font-family: Arial; font-size: 8.6px;fill: rgb(6%,6%,6%); stroke:none;" transform="translate(0,105) scale(1,-1)">Shortest eligible candidate</text>
+			<text x="75.048193359375" y="43.199999999999996" style="font-family: Arial; font-size: 8.6px;fill: rgb(6%,6%,6%); stroke:none;" transform="translate(0,86) scale(1,-1)">or original-context fallback</text>
+			<rect x="4" y="3" width="242" height="26" style="stroke: rgb(55%,58%,61%); stroke-linecap: butt; stroke-width: 0.65; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="75.287548828125" y="13.0" style="font-family: Arial; font-size: 8.6px;fill: rgb(6%,6%,6%); stroke:none;" transform="translate(0,26) scale(1,-1)">One answering-model call</text>
+			<path d="M 125,147 L 125,141 Z" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="122 143, 128 143, 125 139" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,28%,37%); fill-rule: evenodd;"/>
+			<path d="M 125,113 L 125,107 Z" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="122 109, 128 109, 125 105" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,28%,37%); fill-rule: evenodd;"/>
+			<path d="M 125,73 L 125,67 Z" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="122 69, 128 69, 125 65" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,28%,37%); fill-rule: evenodd;"/>
+			<path d="M 125,37 L 125,31 Z" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 0.75;"/>
+			<polygon points="122 33, 128 33, 125 29" style="stroke: rgb(14%,28%,37%); stroke-linecap: butt; stroke-width: 1; fill: rgb(14%,28%,37%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

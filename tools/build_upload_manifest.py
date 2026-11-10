@@ -21,7 +21,7 @@ def eligible(path):
     relative=path.relative_to(ROOT)
     if any(part in EXCLUDED for part in relative.parts):return False
     if len(relative.parts)>1 and relative.parts[0]=='reports' and relative.parts[1] in {'qa','rendered'}:return False
-    return path.name not in {'upload_manifest.json','.DS_Store','Thumbs.db'} and path.suffix!='.pyc'
+    return path.name not in {'upload_manifest.json','.DS_Store','Thumbs.db'} and not path.name.startswith('~$') and path.suffix not in {'.pyc','.tmp'}
 
 def inventory():
     entries=[]
