@@ -1,0 +1,27 @@
+{
+  "tasks": 200,
+  "candidate_records": 400,
+  "split_candidate_counts": {
+    "validation": 160,
+    "train": 240
+  },
+  "original_accuracy": 0.69,
+  "observed_regressions": 52,
+  "regressions_by_ratio": {
+    "0.6": 19,
+    "0.3": 33
+  },
+  "context_token_range": [
+    142,
+    639
+  ],
+  "local_minus_backend_prompt_tokens": [
+    0
+  ],
+  "label_source": "Real Ollama model responses, normalized exact-match against predefined synthetic facts",
+  "candidate_file_sha256": "cccbbacd0e815dc20a35ef699436f5294f52b66c0c0c4da84d9df9f4d24b276f",
+  "candidate_file_sha256_before_feature_refresh": "e9f0a818ed33e9638580afdd50a0eb1d7f12f6ff88daf5ce8d3dc0a011f1f6f5",
+  "features_recomputed_with_final_schema": true,
+  "feature_code_sha256": "ec0592968e3c9682b5bee7d5efe8f3e870dc8912d6f8d36d80de2dca775eeb00",
+  "timing_note": "Per-row labeling preprocess time predates feature refresh and is not a V2 deployment timing measurement."
+}

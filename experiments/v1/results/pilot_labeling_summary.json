@@ -1,0 +1,23 @@
+{
+  "tasks": 100,
+  "candidate_records": 200,
+  "split_candidate_counts": {
+    "pilot": 200
+  },
+  "original_accuracy": 0.68,
+  "observed_regressions": 37,
+  "regressions_by_ratio": {
+    "0.6": 12,
+    "0.3": 25
+  },
+  "context_token_range": [
+    190,
+    245
+  ],
+  "local_minus_backend_prompt_tokens": [
+    0
+  ],
+  "label_source": "Real Ollama model responses, normalized exact-match against predefined synthetic facts",
+  "candidate_file_sha256": "b733dd5feed3ec483f131f960aa61948113da491b20d946cf33c7244673cf059",
+  "metadata_note": "Pilot cache identity normalized to include the fixed model digest; genuine answer text and timestamps retained. Features recomputed from frozen pre-answer feature code."
+}

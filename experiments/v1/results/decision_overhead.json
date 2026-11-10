@@ -1,0 +1,26 @@
+{
+  "scope": "Warm local full decision: both compressions, complete-prompt tokenization, feature extraction, model prediction, candidate selection. Excludes model loading and answering-model calls.",
+  "input_selection": "First 20 pilot tasks, repeated five times after five warmups per model",
+  "torch_cpu_threads": 2,
+  "results": {
+    "mlp": {
+      "n_timed_decisions": 100,
+      "mean_ms": 6.695058000041172,
+      "median_ms": 6.530949962325394,
+      "p95_ms": 8.691000053659081
+    },
+    "lr": {
+      "n_timed_decisions": 100,
+      "mean_ms": 6.201526002259925,
+      "median_ms": 6.234199972823262,
+      "p95_ms": 7.508700015023351
+    },
+    "rf": {
+      "n_timed_decisions": 100,
+      "mean_ms": 16.71395600074902,
+      "median_ms": 16.680300002917647,
+      "p95_ms": 18.19430000614375
+    }
+  },
+  "causal_end_to_end_speedup_claim": false
+}

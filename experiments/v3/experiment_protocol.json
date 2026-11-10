@@ -1,0 +1,90 @@
+{
+  "version": "3.0",
+  "frozen_before_new_labeling_utc": "2026-11-10T21:58:22.894502+00:00",
+  "reason": "Continue toward unchanged token/accuracy/harm goals using retraining and explicit structural guard.",
+  "all_previous_v1_v2_results_are_development": true,
+  "development_task_records": 960,
+  "development_independent_sources": 910,
+  "paired_length_derivatives": 50,
+  "fresh_partitions": {
+    "calibration": 160,
+    "test": 200
+  },
+  "fresh_family_counts": {
+    "calibration": 32,
+    "test": 40
+  },
+  "split_scope": "New wording/layout families and sources, eight already observed high-level structures. Not unseen-structure OOD.",
+  "answering_model": "qwen2.5-coder:0.5b",
+  "answering_model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+  "answering_options": {
+    "temperature": 0,
+    "seed": 520,
+    "num_predict": 24,
+    "num_ctx": 2048,
+    "num_thread": 4,
+    "stop": [
+      "<|im_end|>",
+      "<|endoftext|>"
+    ]
+  },
+  "compressor_unchanged": true,
+  "compression_ratios": [
+    0.6,
+    0.3
+  ],
+  "neural_training": "Train three predeclared MLP seeds on old development only; select epochs by group-disjoint internal validation then refit fixed epochs on all old development.",
+  "neural_seeds": [
+    520,
+    521,
+    522
+  ],
+  "structural_guard": "Explicit pre-answer rule: reject a candidate when a valid original JSON document becomes invalid JSON. Disclosed hybrid, not pure-neural attribution.",
+  "primary_candidate_families": [
+    "hybrid_mlp_ensemble",
+    "hybrid_frozen_v2_mlp"
+  ],
+  "calibration_selection": "Select operating threshold/primary among predeclared hybrid candidate families using new calibration only. Test is never used for selection.",
+  "calibration_harm_buffer_tiers": [
+    0.0125,
+    0.01875,
+    0.025
+  ],
+  "calibration_tier_rule": "Examine harm tolerances from strictest upward; choose maximum-token-saving feasible candidate in the first tier admitting saving>=.20 and accuracy_delta>=-.0125. If no tier feasible, do not freeze/test; continue development.",
+  "calibration_empirical_not_guaranteed": true,
+  "test_success_criteria": {
+    "minimum_input_token_reduction": 0.2,
+    "minimum_accuracy_delta_vs_original": -0.025,
+    "maximum_harmful_per_task": 0.05
+  },
+  "comparators": [
+    "original",
+    "always_60",
+    "always_30",
+    "simple_rule",
+    "LR",
+    "RF",
+    "pure_mlp_ensemble",
+    "structural_guard_only",
+    "frozen_V2_mlp",
+    "hybrid_frozen_v2_mlp",
+    "hybrid_mlp_ensemble"
+  ],
+  "final_test_rule": "Freeze neural weights, selected hybrid policy and thresholds before test labeling. All predefined strategies are reported; no choice on test.",
+  "fixed_input_sha256": {
+    "make_v3_data.py": "81c754282b15e359cb958dd05e62ece95385afea03245cda5a934b1022b08a74",
+    "data/fresh_tasks.jsonl": "2415d5276d6163c1fbe3c3f3f5fb12da875e9483444a750524eef709220c7829",
+    "data/source_registry.jsonl": "95334cc0442051bc3201bc2448ffc1a6e8ed6220334bc0ea8c8c6b9bede3c7b2",
+    "data/generation_audit.json": "11db7cdd21c452397525b413f62c5c3b2d24253bc35344b63a741025874af4c7",
+    "data/development_candidates.jsonl": "dd5fd5eeca60e715487c12012b260cc65db4f392bfefe87bd4fcde9d94b53883",
+    "src/cachescope/compression.py": "3c7ea157dcd6cd32793dcd2932f044637f3918334f3e4d1d7c5c1bd8fc7349c6",
+    "src/cachescope/inference.py": "1b02bd80fe9ecfe964f78edb8fd5c9f69c38d8091459a0a7413d8e30b7778ae0",
+    "src/cachescope/scoring.py": "816d0c76c6b028308fee197c59038bae586715e918d1d1bd40da70542bf5862a"
+  },
+  "limitations": [
+    "Synthetic English owner/date/budget extraction.",
+    "One small local answering model.",
+    "JSON syntax guard does not guarantee semantic correctness.",
+    "Observed test targets are empirical, not a deployment risk guarantee."
+  ]
+}

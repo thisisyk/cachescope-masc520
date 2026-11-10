@@ -1,0 +1,15 @@
+{
+  "all_v1_v2_observations_now_development": true,
+  "no_v1_v2_holdout_claim_for_v3": true,
+  "task_records": 960,
+  "independent_sources": 910,
+  "paired_length_derivatives": 50,
+  "candidate_rows": 1920,
+  "raw_responses": 2880,
+  "v2_data_file_sha256": {
+    "development_candidates.jsonl": "9aae471f241c522f5bfcfc8b2da6abd96030c3cf4c9b1759765ff55a2dcc92c9",
+    "new_train_validation_candidates.jsonl": "cccbbacd0e815dc20a35ef699436f5294f52b66c0c0c4da84d9df9f4d24b276f",
+    "new_test_candidates.jsonl": "adb0f8f51def972f3a49d5d272e3a50a380e6a311ddebae16b3fb7ba3d46805a"
+  },
+  "old_pilot_excluded": true
+}

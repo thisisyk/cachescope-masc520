@@ -1,0 +1,7 @@
+{
+  "seed": 520,
+  "epochs_completed": 26,
+  "best_epoch": 16,
+  "best_validation_loss": 0.8756579160690308,
+  "positive_weight": 3.2612244897959184
+}

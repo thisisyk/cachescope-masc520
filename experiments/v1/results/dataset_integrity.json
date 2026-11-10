@@ -1,0 +1,8 @@
+{
+  "expected_tasks": 550,
+  "observed_candidates": 1100,
+  "exactly_two_candidates_per_task": true,
+  "complete_frozen_dataset": true,
+  "local_and_backend_full_prompt_token_counts_match": true,
+  "pilot_excluded": true
+}

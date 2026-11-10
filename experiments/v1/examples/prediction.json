@@ -1,0 +1,25 @@
+{
+  "model": "mlp",
+  "validation_selected_threshold": 0.1825016736984253,
+  "original_input_tokens": 294,
+  "selected": "original",
+  "selected_input_tokens": 294,
+  "selected_context": "Project Aspen Auxiliary-0000 has owner Mia Blake, release date 2026-02-04, and approved budget USD 18190.\n\nProject Birch Main-0000 belongs to registry item R28554. Registry item R28554 confirms the owner Leo Wells.\n\nProject Birch Auxiliary-0001 has owner Ada Turner, release date 2026-10-16, and approved budget USD 51246.\n\nProject Willow Auxiliary-0002 has owner Mia Turner, release date 2026-12-07, and approved budget USD 62088.\n\nProject Meadow Auxiliary-0003 has owner Iris Ross, release date 2026-11-19, and approved budget USD 85495.\n\nAn unrelated entry R28555 has the owner Maya Carter.\n\nEach paragraph above is an independent project record. Values from one record do not apply to another project.",
+  "candidates": [
+    {
+      "retention_target": 0.6,
+      "context": "Project Aspen Auxiliary-0000 has owner Mia Blake, release date 2026-02-04, and approved budget USD 18190.\nProject Birch Main-0000 belongs to registry item R28554.\nRegistry item R28554 confirms the owner Leo Wells.\nProject Birch Auxiliary-0001 has owner Ada Turner, release date 2026-10-16, and approved budget USD 51246.\nAn unrelated entry R28555 has the owner Maya Carter.",
+      "input_tokens": 198,
+      "risk_score": 0.5417712330818176,
+      "admissible": false
+    },
+    {
+      "retention_target": 0.3,
+      "context": "Project Birch Main-0000 belongs to registry item R28554.\nProject Birch Auxiliary-0001 has owner Ada Turner, release date 2026-10-16, and approved budget USD 51246.\nEach paragraph above is an independent project record.",
+      "input_tokens": 140,
+      "risk_score": 0.9035008549690247,
+      "admissible": false
+    }
+  ],
+  "interpretation": "Uncalibrated conditional risk scores; no guarantee of correctness."
+}

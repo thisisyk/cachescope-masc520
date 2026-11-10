@@ -1,0 +1,88 @@
+{
+  "old_candidate_rows": 1920,
+  "feature_count": 54,
+  "first_38_features_exactly_preserved": true,
+  "all_features_finite": true,
+  "future_v3_tasks_or_outputs_read": false,
+  "feature_sha256": "f8181492e1d86d07d905e6cf5b236c057b2a5796f2c11b4ead5c4bea61d4636e",
+  "folds": [
+    {
+      "fold": 1,
+      "test_groups": 32,
+      "conditional_test_candidates": 232,
+      "models": {
+        "v2_38": {
+          "AP": 0.7096697451561527,
+          "ROC_AUC": 0.7541986126323476,
+          "best_epoch": 4
+        },
+        "v3_54": {
+          "AP": 0.729404587694051,
+          "ROC_AUC": 0.794541803577948,
+          "best_epoch": 5
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "test_groups": 31,
+      "conditional_test_candidates": 388,
+      "models": {
+        "v2_38": {
+          "AP": 0.6667491115483434,
+          "ROC_AUC": 0.795475113122172,
+          "best_epoch": 4
+        },
+        "v3_54": {
+          "AP": 0.7305175194965029,
+          "ROC_AUC": 0.8564420100023815,
+          "best_epoch": 7
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "test_groups": 31,
+      "conditional_test_candidates": 390,
+      "models": {
+        "v2_38": {
+          "AP": 0.7455816063547963,
+          "ROC_AUC": 0.8669926303854876,
+          "best_epoch": 5
+        },
+        "v3_54": {
+          "AP": 0.7238612707583437,
+          "ROC_AUC": 0.8566822562358276,
+          "best_epoch": 5
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "test_groups": 31,
+      "conditional_test_candidates": 364,
+      "models": {
+        "v2_38": {
+          "AP": 0.7643973225116215,
+          "ROC_AUC": 0.8585404030522402,
+          "best_epoch": 30
+        },
+        "v3_54": {
+          "AP": 0.7635767142429976,
+          "ROC_AUC": 0.8615143807474076,
+          "best_epoch": 8
+        }
+      }
+    }
+  ],
+  "pooled_conditional_oof": {
+    "v2_38": {
+      "AP": 0.7107259603492296,
+      "ROC_AUC": 0.8216854025458753
+    },
+    "v3_54": {
+      "AP": 0.7262532923136786,
+      "ROC_AUC": 0.8395366412394021
+    }
+  }
+}

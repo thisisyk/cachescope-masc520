@@ -1,0 +1,420 @@
+{
+  "split": "length_stress",
+  "n_paired_derivatives": 50,
+  "n_new_independent_sources": 0,
+  "unit_of_evaluation": "one padded derivative per existing main-test source task",
+  "threshold_selection": "none on stress data; reuse original main-validation operating points",
+  "selected_thresholds_sha256": "9518d784293db1ff9d6021c28d14a00e0f3d13e342fb7ae78904f3fa9054e829",
+  "locked_thresholds": {
+    "mlp": 0.1825016736984253,
+    "lr": 0.22624337208045825,
+    "rf": 0.17135904134416854,
+    "mlp_seed_521": 0.3430206775665283,
+    "mlp_seed_522": 0.29411327838897705,
+    "mlp_no_numeric": 0.35577547550201416,
+    "mlp_no_overlap": 0.28215208649635315
+  },
+  "protocol_sha256": "8ce359b704de1f3f47b44151e52e18b738fa1c4ddb6e5bd160361bbb7da94a67",
+  "context_token_range": [
+    1000,
+    1013
+  ],
+  "token_count_integrity": "all local complete-prompt counts equal backend prompt_eval_count",
+  "scope": "approximately 1000-context-token synthetic irrelevant-padding stress, not real-world long-document generalization",
+  "dependence": "These reuse 50 existing main-test source facts and inherit their group_id; do not combine them as independent sources with the main test.",
+  "policies": {
+    "original": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.72,
+      "original_accuracy": 0.72,
+      "accuracy_delta": 0.0,
+      "total_input_tokens": 54056,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.0,
+      "accepted_count": 0,
+      "acceptance_rate": 0.0,
+      "harmful_accepted_count": 0,
+      "harmful_accepted_per_task": 0.0,
+      "harmful_accepted_per_accepted": null,
+      "improvement_count": 0,
+      "original_correct_selected_correct": 36,
+      "original_correct_selected_wrong": 0,
+      "original_wrong_selected_correct": 0,
+      "original_wrong_selected_wrong": 14,
+      "observed_answer_latency_s_mean": 8.019988718009554,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          0.0,
+          0.0
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "always_60": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.62,
+      "original_accuracy": 0.72,
+      "accuracy_delta": -0.09999999999999998,
+      "total_input_tokens": 33724,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.37612845937546246,
+      "accepted_count": 50,
+      "acceptance_rate": 1.0,
+      "harmful_accepted_count": 6,
+      "harmful_accepted_per_task": 0.12,
+      "harmful_accepted_per_accepted": 0.12,
+      "improvement_count": 1,
+      "original_correct_selected_correct": 30,
+      "original_correct_selected_wrong": 6,
+      "original_wrong_selected_correct": 1,
+      "original_wrong_selected_wrong": 13,
+      "observed_answer_latency_s_mean": 5.038727969992906,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          -0.25049999999999994,
+          0.020000000000000018
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.3751706122757593,
+          0.3769876747275974
+        ]
+      }
+    },
+    "always_30": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.56,
+      "original_accuracy": 0.72,
+      "accuracy_delta": -0.15999999999999992,
+      "total_input_tokens": 18619,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.6555608998076069,
+      "accepted_count": 50,
+      "acceptance_rate": 1.0,
+      "harmful_accepted_count": 9,
+      "harmful_accepted_per_task": 0.18,
+      "harmful_accepted_per_accepted": 0.18,
+      "improvement_count": 1,
+      "original_correct_selected_correct": 27,
+      "original_correct_selected_wrong": 9,
+      "original_wrong_selected_correct": 1,
+      "original_wrong_selected_wrong": 13,
+      "observed_answer_latency_s_mean": 1.245658568001818,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          -0.32000000000000006,
+          -0.019999999999999934
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.6543798911484752,
+          0.6567820735448371
+        ]
+      }
+    },
+    "simple_rule_gate": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.74,
+      "original_accuracy": 0.72,
+      "accuracy_delta": 0.020000000000000018,
+      "total_input_tokens": 44804,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.17115583838981796,
+      "accepted_count": 16,
+      "acceptance_rate": 0.32,
+      "harmful_accepted_count": 0,
+      "harmful_accepted_per_task": 0.0,
+      "harmful_accepted_per_accepted": 0.0,
+      "improvement_count": 1,
+      "original_correct_selected_correct": 36,
+      "original_correct_selected_wrong": 0,
+      "original_wrong_selected_correct": 1,
+      "original_wrong_selected_wrong": 13,
+      "observed_answer_latency_s_mean": 6.493202432019171,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          0.0,
+          0.06000000000000005
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.044111560898876905,
+          0.29131224181840376
+        ]
+      }
+    },
+    "mlp": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.72,
+      "original_accuracy": 0.72,
+      "accuracy_delta": 0.0,
+      "total_input_tokens": 54056,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.0,
+      "accepted_count": 0,
+      "acceptance_rate": 0.0,
+      "harmful_accepted_count": 0,
+      "harmful_accepted_per_task": 0.0,
+      "harmful_accepted_per_accepted": null,
+      "improvement_count": 0,
+      "original_correct_selected_correct": 36,
+      "original_correct_selected_wrong": 0,
+      "original_wrong_selected_correct": 0,
+      "original_wrong_selected_wrong": 14,
+      "observed_answer_latency_s_mean": 8.019988718009554,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          0.0,
+          0.0
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "lr": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.72,
+      "original_accuracy": 0.72,
+      "accuracy_delta": 0.0,
+      "total_input_tokens": 54056,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.0,
+      "accepted_count": 0,
+      "acceptance_rate": 0.0,
+      "harmful_accepted_count": 0,
+      "harmful_accepted_per_task": 0.0,
+      "harmful_accepted_per_accepted": null,
+      "improvement_count": 0,
+      "original_correct_selected_correct": 36,
+      "original_correct_selected_wrong": 0,
+      "original_wrong_selected_correct": 0,
+      "original_wrong_selected_wrong": 14,
+      "observed_answer_latency_s_mean": 8.019988718009554,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          0.0,
+          0.0
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "rf": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.72,
+      "original_accuracy": 0.72,
+      "accuracy_delta": 0.0,
+      "total_input_tokens": 54056,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.0,
+      "accepted_count": 0,
+      "acceptance_rate": 0.0,
+      "harmful_accepted_count": 0,
+      "harmful_accepted_per_task": 0.0,
+      "harmful_accepted_per_accepted": null,
+      "improvement_count": 0,
+      "original_correct_selected_correct": 36,
+      "original_correct_selected_wrong": 0,
+      "original_wrong_selected_correct": 0,
+      "original_wrong_selected_wrong": 14,
+      "observed_answer_latency_s_mean": 8.019988718009554,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          0.0,
+          0.0
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "mlp_seed_521": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.72,
+      "original_accuracy": 0.72,
+      "accuracy_delta": 0.0,
+      "total_input_tokens": 54056,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.0,
+      "accepted_count": 0,
+      "acceptance_rate": 0.0,
+      "harmful_accepted_count": 0,
+      "harmful_accepted_per_task": 0.0,
+      "harmful_accepted_per_accepted": null,
+      "improvement_count": 0,
+      "original_correct_selected_correct": 36,
+      "original_correct_selected_wrong": 0,
+      "original_wrong_selected_correct": 0,
+      "original_wrong_selected_wrong": 14,
+      "observed_answer_latency_s_mean": 8.019988718009554,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          0.0,
+          0.0
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "mlp_seed_522": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.7,
+      "original_accuracy": 0.72,
+      "accuracy_delta": -0.020000000000000018,
+      "total_input_tokens": 44302,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.18044250406985352,
+      "accepted_count": 24,
+      "acceptance_rate": 0.48,
+      "harmful_accepted_count": 2,
+      "harmful_accepted_per_task": 0.04,
+      "harmful_accepted_per_accepted": 0.08333333333333333,
+      "improvement_count": 1,
+      "original_correct_selected_correct": 34,
+      "original_correct_selected_wrong": 2,
+      "original_wrong_selected_correct": 1,
+      "original_wrong_selected_wrong": 13,
+      "observed_answer_latency_s_mean": 6.634824602000881,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          -0.12,
+          0.05999999999999994
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.09045708628539649,
+          0.2521027240563894
+        ]
+      }
+    },
+    "mlp_no_numeric": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.72,
+      "original_accuracy": 0.72,
+      "accuracy_delta": 0.0,
+      "total_input_tokens": 54056,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.0,
+      "accepted_count": 0,
+      "acceptance_rate": 0.0,
+      "harmful_accepted_count": 0,
+      "harmful_accepted_per_task": 0.0,
+      "harmful_accepted_per_accepted": null,
+      "improvement_count": 0,
+      "original_correct_selected_correct": 36,
+      "original_correct_selected_wrong": 0,
+      "original_wrong_selected_correct": 0,
+      "original_wrong_selected_wrong": 14,
+      "observed_answer_latency_s_mean": 8.019988718009554,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          0.0,
+          0.0
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "mlp_no_overlap": {
+      "n_tasks": 50,
+      "n_groups": 10,
+      "accuracy": 0.56,
+      "original_accuracy": 0.72,
+      "accuracy_delta": -0.15999999999999992,
+      "total_input_tokens": 18619,
+      "original_total_input_tokens": 54056,
+      "input_token_reduction_ratio": 0.6555608998076069,
+      "accepted_count": 50,
+      "acceptance_rate": 1.0,
+      "harmful_accepted_count": 9,
+      "harmful_accepted_per_task": 0.18,
+      "harmful_accepted_per_accepted": 0.18,
+      "improvement_count": 1,
+      "original_correct_selected_correct": 27,
+      "original_correct_selected_wrong": 9,
+      "original_wrong_selected_correct": 1,
+      "original_wrong_selected_wrong": 13,
+      "observed_answer_latency_s_mean": 1.245658568001818,
+      "paired_group_bootstrap": {
+        "method": "paired percentile bootstrap over group_id",
+        "n_bootstrap": 500,
+        "seed": 520,
+        "n_independent_groups": 10,
+        "accuracy_delta_95_ci": [
+          -0.32000000000000006,
+          -0.019999999999999934
+        ],
+        "input_token_reduction_ratio_95_ci": [
+          0.6543798911484752,
+          0.6567820735448371
+        ]
+      }
+    }
+  },
+  "notes": [
+    "No risk model or scaler was fitted or updated.",
+    "No threshold was selected using these outcomes.",
+    "Appendices contain unrelated synthetic descriptive prose with no queried attributes.",
+    "Padding creates a controlled stress test, not natural long-document evidence.",
+    "Bootstrap resamples inherited template groups; do not treat the paired main and stress sets as independent.",
+    "Stored answering-call time is affected by order and cache, not a causal speedup measurement."
+  ]
+}

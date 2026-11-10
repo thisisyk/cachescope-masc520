@@ -1,0 +1,22 @@
+{
+  "tasks": 50,
+  "candidate_records": 100,
+  "split_candidate_counts": {
+    "ood": 100
+  },
+  "original_accuracy": 0.86,
+  "observed_regressions": 19,
+  "regressions_by_ratio": {
+    "0.6": 8,
+    "0.3": 11
+  },
+  "context_token_range": [
+    172,
+    280
+  ],
+  "local_minus_backend_prompt_tokens": [
+    0
+  ],
+  "label_source": "Real Ollama model responses, normalized exact-match against predefined synthetic facts",
+  "candidate_file_sha256": "206d8c065437b655d3067893b45b0810e7ba3514d03d1a7757f5b849a204fae4"
+}

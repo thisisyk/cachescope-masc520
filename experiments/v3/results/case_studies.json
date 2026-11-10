@@ -1,0 +1,550 @@
+{
+  "primary_policy": "hybrid_frozen_v2_mlp",
+  "primary_is_hybrid": true,
+  "primary_weights_description": "底层使用冻结 V2 MLP 权重；本轮重新校准阈值并加入 JSON 检查。新训练权重仍有独立对照结果，不能声称主方案采用了它们。",
+  "test_tasks": 200,
+  "primary_metrics": {
+    "n_tasks": 200,
+    "n_groups": 40,
+    "accuracy": 0.75,
+    "original_accuracy": 0.69,
+    "accuracy_delta": 0.06000000000000005,
+    "total_input_tokens": 66048,
+    "original_total_input_tokens": 89537,
+    "input_token_reduction_ratio": 0.2623384745970939,
+    "accepted_count": 117,
+    "acceptance_rate": 0.585,
+    "harmful_accepted_count": 7,
+    "harmful_accepted_per_task": 0.035,
+    "harmful_accepted_per_accepted": 0.05982905982905983,
+    "improvement_count": 19,
+    "original_correct_selected_correct": 131,
+    "original_correct_selected_wrong": 7,
+    "original_wrong_selected_correct": 19,
+    "original_wrong_selected_wrong": 43,
+    "observed_answer_latency_s_mean": 2.3059371769963763,
+    "paired_group_bootstrap": {
+      "method": "paired percentile bootstrap over group_id",
+      "n_bootstrap": 2000,
+      "seed": 1113520,
+      "n_independent_groups": 40,
+      "accuracy_delta_95_ci": [
+        0.010000000000000009,
+        0.12
+      ],
+      "input_token_reduction_ratio_95_ci": [
+        0.20006844053281697,
+        0.32565069755689957
+      ]
+    }
+  },
+  "all_predeclared_primary_criteria_met": true,
+  "selection_rule": "First two task IDs in each explicitly defined observed-outcome category; no padding for empty categories.",
+  "category_counts": {
+    "harmful": 7,
+    "improved": 19,
+    "still_wrong": 43,
+    "json_guard_selection_change": 10
+  },
+  "cases": [
+    {
+      "category": "harmful",
+      "task_id": "v3-fresh-00050",
+      "task_type": "header",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current approved budget for project Lumen Vela-0050?",
+      "gold": "37443",
+      "answer_aliases": [
+        "37443",
+        "37,443",
+        "USD 37443",
+        "USD 37,443",
+        "$37443",
+        "37443 USD"
+      ],
+      "original_answer": "37443",
+      "selected_answer": "68699",
+      "original_correct": true,
+      "selected_correct": false,
+      "selected_candidate_id": "keep_30",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": 0.2770964205265045,
+      "selected_underlying_neural_score": 0.2770964205265045,
+      "original_context_tokens": 523,
+      "selected_context_tokens": 122,
+      "original_input_tokens": 600,
+      "selected_input_tokens": 199,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 0.2770964205265045,
+          "underlying_neural_score": 0.2770964205265045,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 199,
+          "context_tokens": 122,
+          "observed_answer": "68699",
+          "observed_correct": false
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 0.27024927735328674,
+          "underlying_neural_score": 0.27024927735328674,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 377,
+          "context_tokens": 300,
+          "observed_answer": "54621",
+          "observed_correct": false
+        }
+      ],
+      "source_excerpt": "A project card is headed Lumen Vela-0050. On that card, USD 37443 occupies the approved budget field.",
+      "selected_excerpt": "The project card for Lumen Peripheral-0050-01 gives owner Ada Ross, release date 2028-03-18, and approved budget USD 54621.\nThe project card for Lumen Peripheral-0050-09 gives owner Clara Grant, release date 2028-08-22, and approved budget USD 68699.\nA project card is headed Lumen Vela-0050.\nOn that card, USD 37443 occupies the approved budget field.",
+      "original_context": "The project card for Lagoon Peripheral-0050-00 gives owner Elena Stone, release date 2028-05-25, and approved budget USD 74895.\n\nThe project card for Lumen Peripheral-0050-01 gives owner Ada Ross, release date 2028-03-18, and approved budget USD 54621.\n\nThe project card for Drift Peripheral-0050-02 gives owner Ada Hayes, release date 2028-02-09, and approved budget USD 27687.\n\nThe project card for Beacon Peripheral-0050-03 gives owner Evan Wells, release date 2028-04-12, and approved budget USD 94755.\n\nThe project card for Prairie Peripheral-0050-04 gives owner Owen Brooks, release date 2028-02-13, and approved budget USD 75251.\n\nThe project card for Lagoon Peripheral-0050-05 gives owner Owen Wells, release date 2028-06-11, and approved budget USD 19013.\n\nThe project card for Horizon Peripheral-0050-06 gives owner Evan Parker, release date 2028-06-10, and approved budget USD 34042.\n\nThe project card for Beryl Peripheral-0050-07 gives owner Mia Carter, release date 2028-08-07, and approved budget USD 48375.\n\nThe project card for Glade Peripheral-0050-08 gives owner Owen Hayes, release date 2028-02-07, and approved budget USD 24101.\n\nThe project card for Lumen Peripheral-0050-09 gives owner Clara Grant, release date 2028-08-22, and approved budget USD 68699.\n\nA project card is headed Lumen Vela-0050. On that card, USD 37443 occupies the approved budget field.\n\nThe project card for Horizon Peripheral-0050-10 gives owner Iris Carter, release date 2028-02-05, and approved budget USD 48559.",
+      "selected_context": "The project card for Lumen Peripheral-0050-01 gives owner Ada Ross, release date 2028-03-18, and approved budget USD 54621.\nThe project card for Lumen Peripheral-0050-09 gives owner Clara Grant, release date 2028-08-22, and approved budget USD 68699.\nA project card is headed Lumen Vela-0050.\nOn that card, USD 37443 occupies the approved budget field.",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established."
+    },
+    {
+      "category": "harmful",
+      "task_id": "v3-fresh-00122",
+      "task_type": "update",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current approved budget for project Glade Vela-0122?",
+      "gold": "73002",
+      "answer_aliases": [
+        "73002",
+        "73,002",
+        "USD 73002",
+        "USD 73,002",
+        "$73002",
+        "73002 USD"
+      ],
+      "original_answer": "73002",
+      "selected_answer": "74111",
+      "original_correct": true,
+      "selected_correct": false,
+      "selected_candidate_id": "keep_30",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": 0.2130006104707718,
+      "selected_underlying_neural_score": 0.2130006104707718,
+      "original_context_tokens": 172,
+      "selected_context_tokens": 39,
+      "original_input_tokens": 249,
+      "selected_input_tokens": 116,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 0.2130006104707718,
+          "underlying_neural_score": 0.2130006104707718,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 116,
+          "context_tokens": 39,
+          "observed_answer": "74111",
+          "observed_correct": false
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 0.46128013730049133,
+          "underlying_neural_score": 0.46128013730049133,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 160,
+          "context_tokens": 83,
+          "observed_answer": "73002",
+          "observed_correct": true
+        }
+      ],
+      "source_excerpt": "Project Glade Vela-0122 initially carried approved budget USD 74111. The final signed update changes the recorded value to USD 73002.",
+      "selected_excerpt": "Project Glade Vela-0122 initially carried approved budget USD 74111.\nThe final signed update changes the recorded value to USD 73002.",
+      "original_context": "The project card for Prairie Peripheral-0122-00 gives owner Owen Stone, release date 2028-09-15, and approved budget USD 94687.\n\nProject Glade Vela-0122 initially carried approved budget USD 74111. The final signed update changes the recorded value to USD 73002.\n\nThe project card for Mistral Peripheral-0122-01 gives owner Zoe Parker, release date 2028-11-03, and approved budget USD 61699.\n\nThe project card for Prairie Peripheral-0122-02 gives owner Leo Reed, release date 2028-07-21, and approved budget USD 67348.",
+      "selected_context": "Project Glade Vela-0122 initially carried approved budget USD 74111.\nThe final signed update changes the recorded value to USD 73002.",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established."
+    },
+    {
+      "category": "improved",
+      "task_id": "v3-fresh-00021",
+      "task_type": "direct",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current owner for project Drift Vela-0021?",
+      "gold": "Hugo Wells",
+      "answer_aliases": [
+        "Hugo Wells"
+      ],
+      "original_answer": "Drift Vela-0021",
+      "selected_answer": "Hugo Wells",
+      "original_correct": false,
+      "selected_correct": true,
+      "selected_candidate_id": "keep_30",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": 0.2510097324848175,
+      "selected_underlying_neural_score": 0.2510097324848175,
+      "original_context_tokens": 514,
+      "selected_context_tokens": 113,
+      "original_input_tokens": 590,
+      "selected_input_tokens": 189,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 0.2510097324848175,
+          "underlying_neural_score": 0.2510097324848175,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 189,
+          "context_tokens": 113,
+          "observed_answer": "Hugo Wells",
+          "observed_correct": true
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 0.31086844205856323,
+          "underlying_neural_score": 0.31086844205856323,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 368,
+          "context_tokens": 292,
+          "observed_answer": "Drift Peripheral-0021-10",
+          "observed_correct": false
+        }
+      ],
+      "source_excerpt": "The signed data card pairs project Drift Vela-0021 with Hugo Wells in its owner field.",
+      "selected_excerpt": "The project card for Drift Peripheral-0021-06 gives owner Mia Turner, release date 2028-07-17, and approved budget USD 76012.\nThe signed data card pairs project Drift Vela-0021 with Hugo Wells in its owner field.\nThe project card for Drift Peripheral-0021-10 gives owner Maya Ross, release date 2028-12-16, and approved budget USD 57730.",
+      "original_context": "The project card for Nettle Peripheral-0021-00 gives owner Lena Turner, release date 2028-06-01, and approved budget USD 82373.\n\nThe project card for Beryl Peripheral-0021-01 gives owner Leo Turner, release date 2028-09-02, and approved budget USD 95574.\n\nThe project card for Lumen Peripheral-0021-02 gives owner Iris Parker, release date 2028-04-09, and approved budget USD 78622.\n\nThe project card for Beacon Peripheral-0021-03 gives owner Lena Grant, release date 2028-05-15, and approved budget USD 64423.\n\nThe project card for Prairie Peripheral-0021-04 gives owner Ada Parker, release date 2028-01-09, and approved budget USD 58626.\n\nThe project card for Beacon Peripheral-0021-05 gives owner Elena Cole, release date 2028-09-12, and approved budget USD 31296.\n\nThe project card for Drift Peripheral-0021-06 gives owner Mia Turner, release date 2028-07-17, and approved budget USD 76012.\n\nThe project card for Lumen Peripheral-0021-07 gives owner Zoe Hayes, release date 2028-03-09, and approved budget USD 17761.\n\nThe project card for Cypress Peripheral-0021-08 gives owner Finn Ross, release date 2028-03-24, and approved budget USD 16140.\n\nThe signed data card pairs project Drift Vela-0021 with Hugo Wells in its owner field.\n\nThe project card for Lumen Peripheral-0021-09 gives owner Lena Cole, release date 2028-02-09, and approved budget USD 29273.\n\nThe project card for Drift Peripheral-0021-10 gives owner Maya Ross, release date 2028-12-16, and approved budget USD 57730.",
+      "selected_context": "The project card for Drift Peripheral-0021-06 gives owner Mia Turner, release date 2028-07-17, and approved budget USD 76012.\nThe signed data card pairs project Drift Vela-0021 with Hugo Wells in its owner field.\nThe project card for Drift Peripheral-0021-10 gives owner Maya Ross, release date 2028-12-16, and approved budget USD 57730.",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established."
+    },
+    {
+      "category": "improved",
+      "task_id": "v3-fresh-00024",
+      "task_type": "direct",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current owner for project Beryl Vela-0024?",
+      "gold": "Finn Turner",
+      "answer_aliases": [
+        "Finn Turner"
+      ],
+      "original_answer": "Owen Wells",
+      "selected_answer": "Finn Turner",
+      "original_correct": false,
+      "selected_correct": true,
+      "selected_candidate_id": "keep_30",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": 0.06963783502578735,
+      "selected_underlying_neural_score": 0.06963783502578735,
+      "original_context_tokens": 156,
+      "selected_context_tokens": 23,
+      "original_input_tokens": 232,
+      "selected_input_tokens": 99,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 0.06963783502578735,
+          "underlying_neural_score": 0.06963783502578735,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 99,
+          "context_tokens": 23,
+          "observed_answer": "Finn Turner",
+          "observed_correct": true
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 0.292526513338089,
+          "underlying_neural_score": 0.292526513338089,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 143,
+          "context_tokens": 67,
+          "observed_answer": "Owen Foster",
+          "observed_correct": false
+        }
+      ],
+      "source_excerpt": "The signed data card pairs project Beryl Vela-0024 with Finn Turner in its owner field.",
+      "selected_excerpt": "The signed data card pairs project Beryl Vela-0024 with Finn Turner in its owner field.",
+      "original_context": "The project card for Prairie Peripheral-0024-00 gives owner Owen Foster, release date 2028-11-25, and approved budget USD 17689.\n\nThe project card for Beacon Peripheral-0024-01 gives owner Maya Bennett, release date 2028-11-10, and approved budget USD 44741.\n\nThe signed data card pairs project Beryl Vela-0024 with Finn Turner in its owner field.\n\nThe project card for Lumen Peripheral-0024-02 gives owner Owen Wells, release date 2028-03-06, and approved budget USD 19713.",
+      "selected_context": "The signed data card pairs project Beryl Vela-0024 with Finn Turner in its owner field.",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established."
+    },
+    {
+      "category": "still_wrong",
+      "task_id": "v3-fresh-00029",
+      "task_type": "direct",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current approved budget for project Glade Vela-0029?",
+      "gold": "17044",
+      "answer_aliases": [
+        "17044",
+        "17,044",
+        "USD 17044",
+        "USD 17,044",
+        "$17044",
+        "17044 USD"
+      ],
+      "original_answer": "13671",
+      "selected_answer": "13671",
+      "original_correct": false,
+      "selected_correct": false,
+      "selected_candidate_id": "keep_60",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": 0.2659115195274353,
+      "selected_underlying_neural_score": 0.2659115195274353,
+      "original_context_tokens": 522,
+      "selected_context_tokens": 298,
+      "original_input_tokens": 599,
+      "selected_input_tokens": 375,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 0.42167454957962036,
+          "underlying_neural_score": 0.42167454957962036,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 195,
+          "context_tokens": 118,
+          "observed_answer": "13671",
+          "observed_correct": false
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 0.2659115195274353,
+          "underlying_neural_score": 0.2659115195274353,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 375,
+          "context_tokens": 298,
+          "observed_answer": "13671",
+          "observed_correct": false
+        }
+      ],
+      "source_excerpt": "A check of the completed project file finds approved budget USD 17044 for Glade Vela-0029.",
+      "selected_excerpt": "The project card for Beryl Peripheral-0029-00 gives owner Clara Morgan, release date 2028-11-24, and approved budget USD 92959.\nThe project card for Glade Peripheral-0029-01 gives owner Ada Morgan, release date 2028-01-09, and approved budget USD 13671.\nA check of the completed project file finds approved budget USD 17044 for Glade Vela-0029.\nThe project card for Beryl Peripheral-0029-02 gives owner Noah Ross, release date 2028-10-04, and approved budget USD 93801.\nThe project card for Drift Peripheral-0029-03 gives owner Ada Bennett, release date 2028-09-24, and approved budget USD 85751.\nThe project card for Lumen Peripheral-0029-04 gives owner Owen Cole, release date 2028-12-26, and approved budget USD 31617.\nThe project card for Mistral Peripheral-0029-05 gives owner Maya Turner, release date 2028-12-12, and approved budget USD 21802.",
+      "original_context": "The project card for Beryl Peripheral-0029-00 gives owner Clara Morgan, release date 2028-11-24, and approved budget USD 92959.\n\nThe project card for Glade Peripheral-0029-01 gives owner Ada Morgan, release date 2028-01-09, and approved budget USD 13671.\n\nA check of the completed project file finds approved budget USD 17044 for Glade Vela-0029.\n\nThe project card for Beryl Peripheral-0029-02 gives owner Noah Ross, release date 2028-10-04, and approved budget USD 93801.\n\nThe project card for Drift Peripheral-0029-03 gives owner Ada Bennett, release date 2028-09-24, and approved budget USD 85751.\n\nThe project card for Lumen Peripheral-0029-04 gives owner Owen Cole, release date 2028-12-26, and approved budget USD 31617.\n\nThe project card for Mistral Peripheral-0029-05 gives owner Maya Turner, release date 2028-12-12, and approved budget USD 21802.\n\nThe project card for Drift Peripheral-0029-06 gives owner Mia Foster, release date 2028-01-17, and approved budget USD 57195.\n\nThe project card for Lumen Peripheral-0029-07 gives owner Lena Morgan, release date 2028-05-24, and approved budget USD 31503.\n\nThe project card for Cypress Peripheral-0029-08 gives owner Nora Wells, release date 2028-10-01, and approved budget USD 73032.\n\nThe project card for Drift Peripheral-0029-09 gives owner Maya Foster, release date 2028-01-22, and approved budget USD 60604.\n\nThe project card for Beryl Peripheral-0029-10 gives owner Maya Foster, release date 2028-10-01, and approved budget USD 73113.",
+      "selected_context": "The project card for Beryl Peripheral-0029-00 gives owner Clara Morgan, release date 2028-11-24, and approved budget USD 92959.\nThe project card for Glade Peripheral-0029-01 gives owner Ada Morgan, release date 2028-01-09, and approved budget USD 13671.\nA check of the completed project file finds approved budget USD 17044 for Glade Vela-0029.\nThe project card for Beryl Peripheral-0029-02 gives owner Noah Ross, release date 2028-10-04, and approved budget USD 93801.\nThe project card for Drift Peripheral-0029-03 gives owner Ada Bennett, release date 2028-09-24, and approved budget USD 85751.\nThe project card for Lumen Peripheral-0029-04 gives owner Owen Cole, release date 2028-12-26, and approved budget USD 31617.\nThe project card for Mistral Peripheral-0029-05 gives owner Maya Turner, release date 2028-12-12, and approved budget USD 21802.",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established."
+    },
+    {
+      "category": "still_wrong",
+      "task_id": "v3-fresh-00054",
+      "task_type": "header",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current owner for project Glade Vela-0054?",
+      "gold": "Finn Blake",
+      "answer_aliases": [
+        "Finn Blake"
+      ],
+      "original_answer": "Finn Grant",
+      "selected_answer": "UNKNOWN",
+      "original_correct": false,
+      "selected_correct": false,
+      "selected_candidate_id": "keep_30",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": 0.2958596348762512,
+      "selected_underlying_neural_score": 0.2958596348762512,
+      "original_context_tokens": 516,
+      "selected_context_tokens": 115,
+      "original_input_tokens": 592,
+      "selected_input_tokens": 191,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 0.2958596348762512,
+          "underlying_neural_score": 0.2958596348762512,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 191,
+          "context_tokens": 115,
+          "observed_answer": "UNKNOWN",
+          "observed_correct": false
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 0.303827166557312,
+          "underlying_neural_score": 0.303827166557312,
+          "structural_guard_allowed": true,
+          "original_json_valid": 0.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 369,
+          "context_tokens": 293,
+          "observed_answer": "Finn Grant",
+          "observed_correct": false
+        }
+      ],
+      "source_excerpt": "A project card is headed Glade Vela-0054. On that card, Finn Blake occupies the owner field.",
+      "selected_excerpt": "The project card for Horizon Peripheral-0054-00 gives owner Finn Brooks, release date 2028-09-09, and approved budget USD 44960.\nThe project card for Glade Peripheral-0054-03 gives owner Finn Grant, release date 2028-07-26, and approved budget USD 87012.\nA project card is headed Glade Vela-0054.\nOn that card, Finn Blake occupies the owner field.",
+      "original_context": "The project card for Horizon Peripheral-0054-00 gives owner Finn Brooks, release date 2028-09-09, and approved budget USD 44960.\n\nThe project card for Lagoon Peripheral-0054-01 gives owner Maya Foster, release date 2028-08-10, and approved budget USD 91564.\n\nThe project card for Cypress Peripheral-0054-02 gives owner Ada Cole, release date 2028-05-13, and approved budget USD 28670.\n\nThe project card for Glade Peripheral-0054-03 gives owner Finn Grant, release date 2028-07-26, and approved budget USD 87012.\n\nThe project card for Aquila Peripheral-0054-04 gives owner Iris Cole, release date 2028-08-21, and approved budget USD 25318.\n\nThe project card for Beacon Peripheral-0054-05 gives owner Leo Grant, release date 2028-12-22, and approved budget USD 64262.\n\nThe project card for Aquila Peripheral-0054-06 gives owner Zoe Foster, release date 2028-04-13, and approved budget USD 77947.\n\nThe project card for Cypress Peripheral-0054-07 gives owner Liam Ross, release date 2028-10-13, and approved budget USD 28187.\n\nThe project card for Prairie Peripheral-0054-08 gives owner Finn Parker, release date 2028-12-28, and approved budget USD 71885.\n\nThe project card for Drift Peripheral-0054-09 gives owner Zoe Ross, release date 2028-09-15, and approved budget USD 55647.\n\nThe project card for Lumen Peripheral-0054-10 gives owner Zoe Parker, release date 2028-08-11, and approved budget USD 34320.\n\nA project card is headed Glade Vela-0054. On that card, Finn Blake occupies the owner field.",
+      "selected_context": "The project card for Horizon Peripheral-0054-00 gives owner Finn Brooks, release date 2028-09-09, and approved budget USD 44960.\nThe project card for Glade Peripheral-0054-03 gives owner Finn Grant, release date 2028-07-26, and approved budget USD 87012.\nA project card is headed Glade Vela-0054.\nOn that card, Finn Blake occupies the owner field.",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established."
+    },
+    {
+      "category": "json_guard_selection_change",
+      "task_id": "v3-fresh-00275",
+      "task_type": "nested_json",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current approved budget for project Horizon Vela-0275?",
+      "gold": "53293",
+      "answer_aliases": [
+        "53293",
+        "53,293",
+        "USD 53293",
+        "USD 53,293",
+        "$53293",
+        "53293 USD"
+      ],
+      "original_answer": "USD 53293",
+      "selected_answer": "USD 53293",
+      "original_correct": true,
+      "selected_correct": true,
+      "selected_candidate_id": "original",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": null,
+      "selected_underlying_neural_score": null,
+      "original_context_tokens": 627,
+      "selected_context_tokens": 627,
+      "original_input_tokens": 703,
+      "selected_input_tokens": 703,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 1.0,
+          "underlying_neural_score": 0.48732852935791016,
+          "structural_guard_allowed": false,
+          "original_json_valid": 1.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 264,
+          "context_tokens": 188,
+          "observed_answer": "USD 14396",
+          "observed_correct": false
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 1.0,
+          "underlying_neural_score": 0.28503212332725525,
+          "structural_guard_allowed": false,
+          "original_json_valid": 1.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 452,
+          "context_tokens": 376,
+          "observed_answer": "USD 53293",
+          "observed_correct": true
+        }
+      ],
+      "source_excerpt": "{\n  \"card\": {\n    \"operative_attributes\": {\n      \"owner\": \"Maya Turner\",\n      \"approved budget\": \"USD 53293\",\n      \"release date\": \"2028-02-20\"\n    }\n  },\n  \"project\": \"Horizon Vela-0275\"\n}",
+      "selected_excerpt": "{\n  \"card\": {\n    \"operative_attributes\": {\n      \"owner\": \"Maya Turner\",\n      \"approved budget\": \"USD 53293\",\n      \"release date\": \"2028-02-20\"\n    }\n  },\n  \"project\": \"Horizon Vela-0275\"\n}",
+      "original_context": "{\n  \"certification\": {\n    \"operative_catalogue\": [\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Mia Morgan\",\n            \"approved budget\": \"USD 89880\",\n            \"release date\": \"2028-11-03\"\n          }\n        },\n        \"project\": \"Lagoon Peripheral-0275-00\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Maya Turner\",\n            \"approved budget\": \"USD 53293\",\n            \"release date\": \"2028-02-20\"\n          }\n        },\n        \"project\": \"Horizon Vela-0275\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Lena Parker\",\n            \"approved budget\": \"USD 14396\",\n            \"release date\": \"2028-06-26\"\n          }\n        },\n        \"project\": \"Mistral Peripheral-0275-01\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Iris Carter\",\n            \"approved budget\": \"USD 47366\",\n            \"release date\": \"2028-01-27\"\n          }\n        },\n        \"project\": \"Beryl Peripheral-0275-02\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Clara Carter\",\n            \"approved budget\": \"USD 33975\",\n            \"release date\": \"2028-07-19\"\n          }\n        },\n        \"project\": \"Mistral Peripheral-0275-03\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Owen Stone\",\n            \"approved budget\": \"USD 89597\",\n            \"release date\": \"2028-05-27\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0275-04\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Noah Ross\",\n            \"approved budget\": \"USD 70473\",\n            \"release date\": \"2028-03-13\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0275-05\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Nora Reed\",\n            \"approved budget\": \"USD 27299\",\n            \"release date\": \"2028-03-06\"\n          }\n        },\n        \"project\": \"Beryl Peripheral-0275-06\"\n      }\n    ]\n  }\n}",
+      "selected_context": "{\n  \"certification\": {\n    \"operative_catalogue\": [\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Mia Morgan\",\n            \"approved budget\": \"USD 89880\",\n            \"release date\": \"2028-11-03\"\n          }\n        },\n        \"project\": \"Lagoon Peripheral-0275-00\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Maya Turner\",\n            \"approved budget\": \"USD 53293\",\n            \"release date\": \"2028-02-20\"\n          }\n        },\n        \"project\": \"Horizon Vela-0275\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Lena Parker\",\n            \"approved budget\": \"USD 14396\",\n            \"release date\": \"2028-06-26\"\n          }\n        },\n        \"project\": \"Mistral Peripheral-0275-01\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Iris Carter\",\n            \"approved budget\": \"USD 47366\",\n            \"release date\": \"2028-01-27\"\n          }\n        },\n        \"project\": \"Beryl Peripheral-0275-02\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Clara Carter\",\n            \"approved budget\": \"USD 33975\",\n            \"release date\": \"2028-07-19\"\n          }\n        },\n        \"project\": \"Mistral Peripheral-0275-03\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Owen Stone\",\n            \"approved budget\": \"USD 89597\",\n            \"release date\": \"2028-05-27\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0275-04\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Noah Ross\",\n            \"approved budget\": \"USD 70473\",\n            \"release date\": \"2028-03-13\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0275-05\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Nora Reed\",\n            \"approved budget\": \"USD 27299\",\n            \"release date\": \"2028-03-06\"\n          }\n        },\n        \"project\": \"Beryl Peripheral-0275-06\"\n      }\n    ]\n  }\n}",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established.",
+      "guard_comparison": {
+        "same_threshold_without_guard": {
+          "candidate_id": "keep_60",
+          "threshold": 0.3045129179954529,
+          "answer": "USD 53293",
+          "correct": true,
+          "risk_score": 0.28503212332725525,
+          "excerpt": "{\n\"certification\": {\n\"operative_catalogue\": [\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Mia Morgan\",\n\"approved budget\": \"USD 89880\",\n\"release date\": \"2028-11-03\"\n}\n},\n\"project\": \"Lagoon Peripheral-0275-00\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Maya Turner\",\n\"approved budget\": \"USD 53293\",\n\"release date\": \"2028-02-20\"\n}\n},\n\"project\": \"Horizon Vela-0275\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Lena Parker\",\n\"approved budget\": \"USD 14396\",\n\"release date\": \"2028-06-26\"\n}\n},\n\"project\": \"Mistral Peripheral-0275-01\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Iris Carter\",\n\"approved budget\": \"USD 47366\",\n\"release date\": \"2028-01-27\"\n}\n},\n\"project\": \"Beryl Peripheral-0275-02\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Clara Carter\",\n\"approved budget\": \"USD 33975\",\n\"release date\": \"2028-07-19\"\n}\n},\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"approved budget\": \"USD 89597\",\n}\n},\n\"approved budget\": \"USD 70473\",\n\"approved budget\": \"USD 27299\",",
+          "compressed_context": "{\n\"certification\": {\n\"operative_catalogue\": [\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Mia Morgan\",\n\"approved budget\": \"USD 89880\",\n\"release date\": \"2028-11-03\"\n}\n},\n\"project\": \"Lagoon Peripheral-0275-00\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Maya Turner\",\n\"approved budget\": \"USD 53293\",\n\"release date\": \"2028-02-20\"\n}\n},\n\"project\": \"Horizon Vela-0275\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Lena Parker\",\n\"approved budget\": \"USD 14396\",\n\"release date\": \"2028-06-26\"\n}\n},\n\"project\": \"Mistral Peripheral-0275-01\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Iris Carter\",\n\"approved budget\": \"USD 47366\",\n\"release date\": \"2028-01-27\"\n}\n},\n\"project\": \"Beryl Peripheral-0275-02\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Clara Carter\",\n\"approved budget\": \"USD 33975\",\n\"release date\": \"2028-07-19\"\n}\n},\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"approved budget\": \"USD 89597\",\n}\n},\n\"approved budget\": \"USD 70473\",\n\"approved budget\": \"USD 27299\","
+        },
+        "actual_pure_policy": {
+          "policy": "frozen_v2_mlp",
+          "threshold": 0.3100292682647705,
+          "candidate_id": "keep_60",
+          "answer": "USD 53293",
+          "correct": true
+        },
+        "interpretation": "The same-threshold replay isolates the deterministic guard selection. The actual pure-policy comparison also changes the calibrated operating point."
+      }
+    },
+    {
+      "category": "json_guard_selection_change",
+      "task_id": "v3-fresh-00277",
+      "task_type": "nested_json",
+      "primary_policy": "hybrid_frozen_v2_mlp",
+      "question": "What is the current release date for project Lagoon Vela-0277?",
+      "gold": "2028-03-05",
+      "answer_aliases": [
+        "2028-03-05",
+        "March 5, 2028"
+      ],
+      "original_answer": "2028-11-21",
+      "selected_answer": "2028-11-21",
+      "original_correct": false,
+      "selected_correct": false,
+      "selected_candidate_id": "original",
+      "selection_threshold": 0.3045129179954529,
+      "selected_hybrid_score": null,
+      "selected_underlying_neural_score": null,
+      "original_context_tokens": 624,
+      "selected_context_tokens": 624,
+      "original_input_tokens": 701,
+      "selected_input_tokens": 701,
+      "candidates": [
+        {
+          "candidate_id": "keep_30",
+          "hybrid_score": 1.0,
+          "underlying_neural_score": 0.36744585633277893,
+          "structural_guard_allowed": false,
+          "original_json_valid": 1.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 264,
+          "context_tokens": 187,
+          "observed_answer": "2028-04-25",
+          "observed_correct": false
+        },
+        {
+          "candidate_id": "keep_60",
+          "hybrid_score": 1.0,
+          "underlying_neural_score": 0.26410138607025146,
+          "structural_guard_allowed": false,
+          "original_json_valid": 1.0,
+          "compressed_json_valid": 0.0,
+          "input_tokens": 451,
+          "context_tokens": 374,
+          "observed_answer": "2028-11-21",
+          "observed_correct": false
+        }
+      ],
+      "source_excerpt": "{\n  \"card\": {\n    \"operative_attributes\": {\n      \"owner\": \"Leo Parker\",\n      \"approved budget\": \"USD 26930\",\n      \"release date\": \"2028-03-05\"\n    }\n  },\n  \"project\": \"Lagoon Vela-0277\"\n}",
+      "selected_excerpt": "{\n  \"card\": {\n    \"operative_attributes\": {\n      \"owner\": \"Leo Parker\",\n      \"approved budget\": \"USD 26930\",\n      \"release date\": \"2028-03-05\"\n    }\n  },\n  \"project\": \"Lagoon Vela-0277\"\n}",
+      "original_context": "{\n  \"certification\": {\n    \"operative_catalogue\": [\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Evan Grant\",\n            \"approved budget\": \"USD 77004\",\n            \"release date\": \"2028-04-16\"\n          }\n        },\n        \"project\": \"Aquila Peripheral-0277-00\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Leo Reed\",\n            \"approved budget\": \"USD 77373\",\n            \"release date\": \"2028-04-25\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0277-01\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Owen Carter\",\n            \"approved budget\": \"USD 42081\",\n            \"release date\": \"2028-03-27\"\n          }\n        },\n        \"project\": \"Lumen Peripheral-0277-02\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Leo Parker\",\n            \"approved budget\": \"USD 26930\",\n            \"release date\": \"2028-03-05\"\n          }\n        },\n        \"project\": \"Lagoon Vela-0277\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Owen Turner\",\n            \"approved budget\": \"USD 73356\",\n            \"release date\": \"2028-11-21\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0277-03\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Elena Hayes\",\n            \"approved budget\": \"USD 28666\",\n            \"release date\": \"2028-06-04\"\n          }\n        },\n        \"project\": \"Aquila Peripheral-0277-04\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Mia Stone\",\n            \"approved budget\": \"USD 16152\",\n            \"release date\": \"2028-06-17\"\n          }\n        },\n        \"project\": \"Prairie Peripheral-0277-05\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Ada Reed\",\n            \"approved budget\": \"USD 68461\",\n            \"release date\": \"2028-03-03\"\n          }\n        },\n        \"project\": \"Mistral Peripheral-0277-06\"\n      }\n    ]\n  }\n}",
+      "selected_context": "{\n  \"certification\": {\n    \"operative_catalogue\": [\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Evan Grant\",\n            \"approved budget\": \"USD 77004\",\n            \"release date\": \"2028-04-16\"\n          }\n        },\n        \"project\": \"Aquila Peripheral-0277-00\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Leo Reed\",\n            \"approved budget\": \"USD 77373\",\n            \"release date\": \"2028-04-25\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0277-01\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Owen Carter\",\n            \"approved budget\": \"USD 42081\",\n            \"release date\": \"2028-03-27\"\n          }\n        },\n        \"project\": \"Lumen Peripheral-0277-02\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Leo Parker\",\n            \"approved budget\": \"USD 26930\",\n            \"release date\": \"2028-03-05\"\n          }\n        },\n        \"project\": \"Lagoon Vela-0277\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Owen Turner\",\n            \"approved budget\": \"USD 73356\",\n            \"release date\": \"2028-11-21\"\n          }\n        },\n        \"project\": \"Drift Peripheral-0277-03\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Elena Hayes\",\n            \"approved budget\": \"USD 28666\",\n            \"release date\": \"2028-06-04\"\n          }\n        },\n        \"project\": \"Aquila Peripheral-0277-04\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Mia Stone\",\n            \"approved budget\": \"USD 16152\",\n            \"release date\": \"2028-06-17\"\n          }\n        },\n        \"project\": \"Prairie Peripheral-0277-05\"\n      },\n      {\n        \"card\": {\n          \"operative_attributes\": {\n            \"owner\": \"Ada Reed\",\n            \"approved budget\": \"USD 68461\",\n            \"release date\": \"2028-03-03\"\n          }\n        },\n        \"project\": \"Mistral Peripheral-0277-06\"\n      }\n    ]\n  }\n}",
+      "observation_note": "Observed paired answers and a deterministic pre-answer selection; the mechanism of an answering error is not established.",
+      "guard_comparison": {
+        "same_threshold_without_guard": {
+          "candidate_id": "keep_60",
+          "threshold": 0.3045129179954529,
+          "answer": "2028-11-21",
+          "correct": false,
+          "risk_score": 0.26410138607025146,
+          "excerpt": "{\n\"certification\": {\n\"operative_catalogue\": [\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Evan Grant\",\n\"approved budget\": \"USD 77004\",\n\"release date\": \"2028-04-16\"\n}\n},\n\"project\": \"Aquila Peripheral-0277-00\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Leo Reed\",\n\"approved budget\": \"USD 77373\",\n\"release date\": \"2028-04-25\"\n}\n},\n\"project\": \"Drift Peripheral-0277-01\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Owen Carter\",\n\"approved budget\": \"USD 42081\",\n\"release date\": \"2028-03-27\"\n}\n},\n\"project\": \"Lumen Peripheral-0277-02\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Leo Parker\",\n\"approved budget\": \"USD 26930\",\n\"release date\": \"2028-03-05\"\n}\n},\n\"project\": \"Lagoon Vela-0277\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Owen Turner\",\n\"approved budget\": \"USD 73356\",\n\"release date\": \"2028-11-21\"\n}\n},\n},\n{\n\"release date\": \"2028-06-04\"\n}\n},\n},\n\"release date\": \"2028-06-17\"\n\"release date\": \"2028-03-03\"",
+          "compressed_context": "{\n\"certification\": {\n\"operative_catalogue\": [\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Evan Grant\",\n\"approved budget\": \"USD 77004\",\n\"release date\": \"2028-04-16\"\n}\n},\n\"project\": \"Aquila Peripheral-0277-00\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Leo Reed\",\n\"approved budget\": \"USD 77373\",\n\"release date\": \"2028-04-25\"\n}\n},\n\"project\": \"Drift Peripheral-0277-01\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Owen Carter\",\n\"approved budget\": \"USD 42081\",\n\"release date\": \"2028-03-27\"\n}\n},\n\"project\": \"Lumen Peripheral-0277-02\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Leo Parker\",\n\"approved budget\": \"USD 26930\",\n\"release date\": \"2028-03-05\"\n}\n},\n\"project\": \"Lagoon Vela-0277\"\n},\n{\n\"card\": {\n\"operative_attributes\": {\n\"owner\": \"Owen Turner\",\n\"approved budget\": \"USD 73356\",\n\"release date\": \"2028-11-21\"\n}\n},\n},\n{\n\"release date\": \"2028-06-04\"\n}\n},\n},\n\"release date\": \"2028-06-17\"\n\"release date\": \"2028-03-03\""
+        },
+        "actual_pure_policy": {
+          "policy": "frozen_v2_mlp",
+          "threshold": 0.3100292682647705,
+          "candidate_id": "keep_60",
+          "answer": "2028-11-21",
+          "correct": false
+        },
+        "interpretation": "The same-threshold replay isolates the deterministic guard selection. The actual pure-policy comparison also changes the calibrated operating point."
+      }
+    }
+  ],
+  "inputs_sha256": {
+    "metrics": "026fc13a8a23ce4bac45111d0188e6e775e8e07b43c52f14b51d28c2a415a0f8",
+    "frozen_selection": "a4fb62be914829cdcacb735026461d2f684b363b1d0cb90d88c17149adf91d0e",
+    "scored_candidates": "b8c0453da7b8b956d8122613e4e721bd68f0d97c3d6138af4fe3773aafd9d37f",
+    "policy_decisions": "160c837bdf1ff62f2ddf3955b2a14d5d846d00a418d1337a004980af6bc9a51d"
+  },
+  "synthetic_sources_only": true,
+  "models_thresholds_or_observations_changed": false
+}

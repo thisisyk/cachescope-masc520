@@ -1,0 +1,42 @@
+{
+  "frozen_before_formal_labeling_utc": "2026-11-04T18:34:05.589688+00:00",
+  "main_tasks": 500,
+  "pilot_tasks": 100,
+  "structural_holdout_tasks": 50,
+  "main_split_tasks": {
+    "train": 300,
+    "validation": 100,
+    "test": 100
+  },
+  "seed": 520,
+  "answering_model": "qwen2.5-coder:0.5b",
+  "answering_model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+  "model_seed": 520,
+  "training_seeds": [
+    520,
+    521,
+    522
+  ],
+  "compression_retention_targets": [
+    0.6,
+    0.3
+  ],
+  "validation_constraint_epsilon": 0.02,
+  "primary_model": "mlp_seed_520",
+  "scope": "controlled synthetic factual extraction; no cross-model or long-context claim",
+  "sha256": {
+    "src/cachescope/compression.py": "3c7ea157dcd6cd32793dcd2932f044637f3918334f3e4d1d7c5c1bd8fc7349c6",
+    "src/cachescope/data.py": "63ce3392b401d2e30814ad61fa6b021eeb0d9e4bdf2bad8a98b96a40096e6074",
+    "src/cachescope/evaluation.py": "891d4945f59e393a470213848ba60825535bc1d41fd3102986991f6369dfd74e",
+    "src/cachescope/features.py": "183dc6ed0f0a14906a4717afafbc1e12ec931f659f9059863f94d314244cacb6",
+    "src/cachescope/inference.py": "1b02bd80fe9ecfe964f78edb8fd5c9f69c38d8091459a0a7413d8e30b7778ae0",
+    "src/cachescope/models.py": "2a472a53ee066bcf60da5b87483d19a13b5219827968e29dc4f3510ac999ed0c",
+    "src/cachescope/pipeline.py": "c3ecbf3b08fcb2d1ed297980b7ea0cc7360158d121a631ea4a777d90938bfb4f",
+    "src/cachescope/scoring.py": "816d0c76c6b028308fee197c59038bae586715e918d1d1bd40da70542bf5862a",
+    "src/cachescope/__init__.py": "f7ca69397e6d9a7177a5eaca1247af8a124e060749424d86598a69a00969641f",
+    "data/main_tasks.jsonl": "a7c7f6a537f2e367fd4bafd089b8250ff43eafbbbe80bd2b24a5dfcca4ce4fbf",
+    "data/pilot_tasks.jsonl": "bc09756daab5f17c72bc8b93a6344a00fb78df61134f4d74eb00ed6d85670d3a",
+    "data/structural_holdout_tasks.jsonl": "036277e5b8a194f1081b289aa33b33518cf62deef84f4a6ede95fe3237f4efda",
+    "data/split_manifest.json": "47abccae3b7493d5bf3b682bf694cc8838aa16da72f77401b7103304f2da39e3"
+  }
+}

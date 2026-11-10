@@ -1,0 +1,13 @@
+Project Aspen Auxiliary-0000 has owner Mia Blake, release date 2026-02-04, and approved budget USD 18190.
+
+Project Birch Main-0000 belongs to registry item R28554. Registry item R28554 confirms the owner Leo Wells.
+
+Project Birch Auxiliary-0001 has owner Ada Turner, release date 2026-10-16, and approved budget USD 51246.
+
+Project Willow Auxiliary-0002 has owner Mia Turner, release date 2026-12-07, and approved budget USD 62088.
+
+Project Meadow Auxiliary-0003 has owner Iris Ross, release date 2026-11-19, and approved budget USD 85495.
+
+An unrelated entry R28555 has the owner Maya Carter.
+
+Each paragraph above is an independent project record. Values from one record do not apply to another project.

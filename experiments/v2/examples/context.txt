@@ -1,0 +1,9 @@
+Project Harbor Demo-101 has owner Mia Brooks, release date 2027-03-18, and approved budget USD 43000.
+
+Project Demo-520 has owner Ada Reed, release date 2027-06-09, and approved budget USD 62000.
+
+Project Maple Demo-202 has owner Owen Stone, release date 2027-09-15, and approved budget USD 28000.
+
+Project Cedar Demo-303 has owner Lena Ward, release date 2027-11-02, and approved budget USD 75000.
+
+Each paragraph describes an independent project. Values apply only to the project named in that paragraph.

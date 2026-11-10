@@ -1,0 +1,22 @@
+{
+  "fitted_at_utc": "2026-11-10T22:01:20.730381+00:00",
+  "files_sha256": {
+    "models\\lr.joblib": "54588bd08cd97f29ed952918d58fafc2bc149c940625b60a1bd372e68d192447",
+    "models\\mlp_seed_520.pt": "f826b2d67c089de57b792f6d83f621088abccee5fb9e359db723c72ae6a40814",
+    "models\\mlp_seed_520_history.json": "1c29f5af9cc32a096833c878affa1afdfd8ceab24bff3b83e15b11ad81662bd1",
+    "models\\mlp_seed_520_refit_history.json": "8270d886dbd870ec1e6aa50ede8f641c58504e89dd0205fcedffd517cc2e88de",
+    "models\\mlp_seed_521.pt": "fd2d9c7ff93d25f806a1eedf1a41e510e8df8b7bf6bd2229c41bf4f22a049704",
+    "models\\mlp_seed_521_history.json": "11d792ae1dbf1e0f3e5ae190966f238b5eca24a222f7f14eb527b1a16aac518e",
+    "models\\mlp_seed_521_refit_history.json": "ec7d251c8f131fe857a0fea49127161155ef68d24d1b14e59a2467e52dc76417",
+    "models\\mlp_seed_522.pt": "b600932e42fce844fefe974c977f7f8dcfdef7299ecebd37836f9bfbb2babf7e",
+    "models\\mlp_seed_522_history.json": "d90a3c7d8a4d11f4a6408b7a6ab345afe1d2c6a27233ab3cf726c780f77ab602",
+    "models\\mlp_seed_522_refit_history.json": "e1ae42e9e6b6e24592ab2a6395224938e5c18975afec5e1302c06d4d8383d6df",
+    "models\\rf.joblib": "70bdcf556673b8185b6b00132b6fa558ae5d9e19e6d3516e95a8201d9b40a5e9",
+    "models\\training_report.json": "c5e00ecc7a8c2ddbc3bd677ab20c8f27ec8178c544345e5ee08c78dc52f98b43",
+    "data/development_candidates.jsonl": "dd5fd5eeca60e715487c12012b260cc65db4f392bfefe87bd4fcde9d94b53883",
+    "src/cachescope/features.py": "f8181492e1d86d07d905e6cf5b236c057b2a5796f2c11b4ead5c4bea61d4636e",
+    "src/cachescope/models.py": "2a472a53ee066bcf60da5b87483d19a13b5219827968e29dc4f3510ac999ed0c",
+    "train_v3.py": "614066761b1adca8421995af1db8eb08f5865ad3100641cf25e03b5208164109"
+  },
+  "weights_fit_without_fresh_calibration_or_test": true
+}

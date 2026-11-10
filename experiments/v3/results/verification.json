@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "primary_policy": "hybrid_frozen_v2_mlp",
+  "development_task_records": 960,
+  "new_source_tasks": 360,
+  "final_test_tasks": 200,
+  "candidate_rows_verified": 2640,
+  "unique_real_cached_responses": 3960,
+  "new_real_cached_responses": 1080,
+  "frozen_code_model_data_hashes_match": true,
+  "family_and_source_splits_disjoint": true,
+  "gold_labels_recomputed_from_real_answers": true,
+  "all_full_prompt_tokens_match_backend": true,
+  "prompt_cache_identity_digest_options_verified": true,
+  "final_features_recomputed_exactly": true,
+  "all_saved_model_scores_and_guard_flags_recomputed": true,
+  "primary_policy_metrics_recomputed": true,
+  "done_reason_answer_references": {
+    "stop": 5280
+  }
+}

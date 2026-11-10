@@ -1,0 +1,18 @@
+{
+  "unit_tests_passed": 14,
+  "full_candidate_label_feature_raw_reference_audit": "PASS",
+  "candidate_records": 1400,
+  "task_records": 700,
+  "independent_synthetic_source_tasks": 650,
+  "paired_length_derivatives": 50,
+  "raw_genuine_response_observations": 2160,
+  "raw_cache_keys_unique": true,
+  "backend_done_reasons": {
+    "stop": 2160
+  },
+  "actual_prediction_entrypoint_smoke": "PASS",
+  "local_powershell_launcher_verify": "PASS",
+  "all_four_figures_visually_inspected": true,
+  "repeat_comparisons": 60,
+  "repeat_correctness_changes": 0
+}

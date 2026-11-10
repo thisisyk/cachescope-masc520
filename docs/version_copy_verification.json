@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "byte_preserved": true,
+  "versions": {
+    "v1": 101,
+    "v2": 85,
+    "v3": 92
+  },
+  "files_copied": 278,
+  "original_deliveries_unmodified": true
+}

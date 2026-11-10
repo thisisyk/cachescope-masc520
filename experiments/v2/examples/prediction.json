@@ -1,0 +1,25 @@
+{
+  "model": "mlp",
+  "validation_selected_threshold": 0.3100292682647705,
+  "original_input_tokens": 237,
+  "selected": "keep_30",
+  "selected_input_tokens": 115,
+  "selected_context": "Project Demo-520 has owner Ada Reed, release date 2027-06-09, and approved budget USD 62000.\nEach paragraph describes an independent project.",
+  "candidates": [
+    {
+      "candidate_id": "keep_60",
+      "context": "Project Harbor Demo-101 has owner Mia Brooks, release date 2027-03-18, and approved budget USD 43000.\nProject Demo-520 has owner Ada Reed, release date 2027-06-09, and approved budget USD 62000.\nEach paragraph describes an independent project.\nValues apply only to the project named in that paragraph.",
+      "input_tokens": 163,
+      "risk_score": 0.34851986169815063,
+      "admissible": false
+    },
+    {
+      "candidate_id": "keep_30",
+      "context": "Project Demo-520 has owner Ada Reed, release date 2027-06-09, and approved budget USD 62000.\nEach paragraph describes an independent project.",
+      "input_tokens": 115,
+      "risk_score": 0.15457424521446228,
+      "admissible": true
+    }
+  ],
+  "interpretation": "Uncalibrated conditional risk; empirical validation threshold, no correctness guarantee."
+}

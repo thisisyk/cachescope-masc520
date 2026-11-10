@@ -1,0 +1,25 @@
+{
+  "tasks": 160,
+  "candidate_records": 320,
+  "split_candidate_counts": {
+    "calibration": 320
+  },
+  "original_accuracy": 0.6875,
+  "observed_regressions": 43,
+  "regressions_by_ratio": {
+    "0.6": 20,
+    "0.3": 23
+  },
+  "context_token_range": [
+    157,
+    633
+  ],
+  "local_minus_backend_prompt_tokens": [
+    0
+  ],
+  "label_source": "Real Ollama model responses, normalized exact-match against predefined synthetic facts",
+  "candidate_file_sha256": "d09ece164557a1d09e8f7807cba9e2fbb970a1dcfd8c9d1b2dc8cebb11dbe8df",
+  "candidate_sha256_before_feature_refresh": "d09ece164557a1d09e8f7807cba9e2fbb970a1dcfd8c9d1b2dc8cebb11dbe8df",
+  "feature_code_sha256": "f8181492e1d86d07d905e6cf5b236c057b2a5796f2c11b4ead5c4bea61d4636e",
+  "timing_note": "Stored labeling preprocessing times are not deployment-decision benchmarks."
+}

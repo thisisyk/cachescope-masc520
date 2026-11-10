@@ -1,0 +1,196 @@
+{
+  "seed": 1111520,
+  "tasks": 360,
+  "unique_source_ids": 360,
+  "unique_task_ids": 360,
+  "families": 72,
+  "tasks_per_family": 5,
+  "family_splits_disjoint": true,
+  "split_counts": {
+    "validation": 80,
+    "train": 120,
+    "test": 160
+  },
+  "structure_counts": {
+    "direct": 45,
+    "header": 45,
+    "update": 45,
+    "contrast": 45,
+    "reference": 45,
+    "table": 45,
+    "nested_json": 45,
+    "paired_directory": 45
+  },
+  "length_band_counts": {
+    "short": 184,
+    "long": 176
+  },
+  "structure_split_length_counts": {
+    "direct/validation/short": 5,
+    "direct/validation/long": 5,
+    "direct/train/short": 8,
+    "direct/train/long": 7,
+    "direct/test/long": 10,
+    "direct/test/short": 10,
+    "header/train/short": 8,
+    "header/train/long": 7,
+    "header/test/long": 10,
+    "header/test/short": 10,
+    "header/validation/long": 5,
+    "header/validation/short": 5,
+    "update/test/short": 11,
+    "update/test/long": 9,
+    "update/train/long": 8,
+    "update/train/short": 7,
+    "update/validation/short": 5,
+    "update/validation/long": 5,
+    "contrast/test/short": 10,
+    "contrast/test/long": 10,
+    "contrast/train/short": 8,
+    "contrast/train/long": 7,
+    "contrast/validation/long": 5,
+    "contrast/validation/short": 5,
+    "reference/train/short": 8,
+    "reference/train/long": 7,
+    "reference/test/long": 11,
+    "reference/test/short": 9,
+    "reference/validation/short": 6,
+    "reference/validation/long": 4,
+    "table/train/short": 8,
+    "table/train/long": 7,
+    "table/test/long": 11,
+    "table/test/short": 9,
+    "table/validation/short": 6,
+    "table/validation/long": 4,
+    "nested_json/train/short": 9,
+    "nested_json/train/long": 6,
+    "nested_json/test/long": 11,
+    "nested_json/test/short": 9,
+    "nested_json/validation/short": 5,
+    "nested_json/validation/long": 5,
+    "paired_directory/test/short": 10,
+    "paired_directory/test/long": 10,
+    "paired_directory/train/long": 7,
+    "paired_directory/train/short": 8,
+    "paired_directory/validation/short": 5,
+    "paired_directory/validation/long": 5
+  },
+  "max_characters": 1785,
+  "max_words": 202,
+  "context_tokens": {
+    "min": 142,
+    "max": 639,
+    "by_band": {
+      "short": {
+        "min": 142,
+        "max": 231
+      },
+      "long": {
+        "min": 478,
+        "max": 639
+      }
+    }
+  },
+  "gold_audit": {
+    "canonical_registry_checked": 360,
+    "structured_context_independently_parsed": 135,
+    "prose_checked_against_explicit_canonical_registry": 225,
+    "target_current_value_differs_from_distractor_values": true,
+    "no_llm_answers_observed_during_generation": true
+  },
+  "scope": "Controlled synthetic factual extraction; eight known structures occur in all splits; wording/layout families and sources are disjoint. Not a structural OOD or real-document benchmark.",
+  "family_assignments": {
+    "direct": {
+      "4": "train",
+      "2": "train",
+      "3": "train",
+      "1": "validation",
+      "0": "validation",
+      "6": "test",
+      "5": "test",
+      "8": "test",
+      "7": "test"
+    },
+    "header": {
+      "2": "train",
+      "0": "train",
+      "1": "train",
+      "6": "validation",
+      "5": "validation",
+      "7": "test",
+      "4": "test",
+      "3": "test",
+      "8": "test"
+    },
+    "update": {
+      "3": "train",
+      "4": "train",
+      "1": "train",
+      "2": "validation",
+      "5": "validation",
+      "0": "test",
+      "8": "test",
+      "7": "test",
+      "6": "test"
+    },
+    "contrast": {
+      "3": "train",
+      "2": "train",
+      "8": "train",
+      "6": "validation",
+      "5": "validation",
+      "4": "test",
+      "7": "test",
+      "0": "test",
+      "1": "test"
+    },
+    "reference": {
+      "6": "train",
+      "3": "train",
+      "0": "train",
+      "2": "validation",
+      "8": "validation",
+      "5": "test",
+      "7": "test",
+      "1": "test",
+      "4": "test"
+    },
+    "table": {
+      "0": "train",
+      "5": "train",
+      "8": "train",
+      "2": "validation",
+      "6": "validation",
+      "7": "test",
+      "1": "test",
+      "4": "test",
+      "3": "test"
+    },
+    "nested_json": {
+      "4": "train",
+      "0": "train",
+      "8": "train",
+      "7": "validation",
+      "6": "validation",
+      "5": "test",
+      "2": "test",
+      "3": "test",
+      "1": "test"
+    },
+    "paired_directory": {
+      "4": "train",
+      "8": "train",
+      "1": "train",
+      "7": "validation",
+      "2": "validation",
+      "3": "test",
+      "0": "test",
+      "6": "test",
+      "5": "test"
+    }
+  },
+  "sha256": {
+    "new_tasks.jsonl": "e61c43b758693fb48cf961b20d3f417915e95663ce2128744a3dbc47fa27e07c",
+    "source_registry.jsonl": "72c0ee39a2f36f4cbb6ca7934d0357e04f241343dbfd35b70039ed48b9ccb36b"
+  }
+}

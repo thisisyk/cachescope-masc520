@@ -1,0 +1,75 @@
+{
+  "version": "2.0",
+  "frozen_before_new_labeling_utc": "2026-11-10T18:16:32.817114+00:00",
+  "reason": "Address observed V1 structural and length weaknesses, without changing V1 results.",
+  "all_v1_observations_are_development": true,
+  "development_task_records": 600,
+  "development_independent_sources": 550,
+  "development_paired_length_derivatives": 50,
+  "new_split_counts": {
+    "train": 120,
+    "validation": 80,
+    "test": 160
+  },
+  "split_unit": "Wording/layout family; eight known high-level structures occur in each split; not structural OOD.",
+  "answering_model": "qwen2.5-coder:0.5b",
+  "answering_model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+  "answering_options": {
+    "temperature": 0,
+    "seed": 520,
+    "num_predict": 24,
+    "num_ctx": 2048,
+    "num_thread": 4,
+    "stop": [
+      "<|im_end|>",
+      "<|endoftext|>"
+    ]
+  },
+  "compression_ratios": [
+    0.6,
+    0.3
+  ],
+  "compressor_unchanged_from_v1": true,
+  "risk_label": "original correct AND compressed wrong; train conditional on original correct",
+  "primary_model": "mlp_seed_520",
+  "seeds": [
+    520,
+    521,
+    522
+  ],
+  "architecture": "d -> 32 ReLU -> 16 ReLU -> 1 logit",
+  "features_may_be_developed_only_using_old_data_and_new_train_validation": "Test labeling blocked until model artifacts and selection frozen.",
+  "validation_threshold_epsilon": 0.025,
+  "validation_threshold_objective": "Maximum input token reduction subject to harmful_per_task <= 0.025 and accuracy_delta >= -0.025",
+  "test_success_criteria": {
+    "minimum_input_token_reduction": 0.2,
+    "minimum_accuracy_delta_vs_original": -0.025,
+    "maximum_harmful_per_task": 0.05
+  },
+  "comparators": [
+    "original",
+    "always_60",
+    "always_30",
+    "simple_rule_gate",
+    "LR",
+    "RF",
+    "V1 frozen MLP",
+    "MLP V1 features same development data"
+  ],
+  "test_rule": "Freeze all model artifacts and thresholds before test labeling. Evaluate once; no model selection on test outcomes.",
+  "data_generation_frozen_hashes": {
+    "make_v2_data.py": "310cfd4ce5840c992d766015647ad3dd1787b47598847328433bf945376b54bf",
+    "data/new_tasks.jsonl": "e61c43b758693fb48cf961b20d3f417915e95663ce2128744a3dbc47fa27e07c",
+    "data/source_registry.jsonl": "72c0ee39a2f36f4cbb6ca7934d0357e04f241343dbfd35b70039ed48b9ccb36b",
+    "data/development_candidates.jsonl": "9aae471f241c522f5bfcfc8b2da6abd96030c3cf4c9b1759765ff55a2dcc92c9",
+    "src/cachescope/compression.py": "3c7ea157dcd6cd32793dcd2932f044637f3918334f3e4d1d7c5c1bd8fc7349c6",
+    "src/cachescope/inference.py": "1b02bd80fe9ecfe964f78edb8fd5c9f69c38d8091459a0a7413d8e30b7778ae0",
+    "src/cachescope/scoring.py": "816d0c76c6b028308fee197c59038bae586715e918d1d1bd40da70542bf5862a"
+  },
+  "limitations": [
+    "Synthetic English name/date/budget extraction only.",
+    "One small answering model on local CPU.",
+    "High-level test structures were deliberately added to training; no claim of unseen-structure generalization.",
+    "Validation tolerances are empirical targets, not guarantees."
+  ]
+}

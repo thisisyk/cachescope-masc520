@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "rendered_source_current_values_independently_parsed": 360,
+  "counts": {
+    "direct": 45,
+    "header": 45,
+    "update": 45,
+    "contrast": 45,
+    "reference": 45,
+    "table": 45,
+    "nested_json": 45,
+    "paired_directory": 45
+  },
+  "model_outputs_read": false,
+  "data_sha256": "e61c43b758693fb48cf961b20d3f417915e95663ce2128744a3dbc47fa27e07c"
+}

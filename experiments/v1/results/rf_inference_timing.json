@@ -1,0 +1,6 @@
+{
+  "n_candidates": 1100,
+  "batch_wall_s": 0.05249869998078793,
+  "batch_amortized_s_per_candidate": 4.772609089162539e-05,
+  "limitation": "Batch timing excludes compression and does not establish end-to-end speedup."
+}

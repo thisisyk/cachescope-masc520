@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "development_task_records": 600,
+  "new_task_records": 360,
+  "candidate_rows_verified": 1920,
+  "unique_real_cached_responses": 2880,
+  "new_real_cached_responses": 1080,
+  "wording_family_splits_disjoint": true,
+  "new_old_task_and_source_ids_disjoint": true,
+  "labels_recomputed_from_real_answers": true,
+  "prompt_hash_cache_identity_digest_options_verified": true,
+  "backend_and_local_full_prompt_tokens_match": true,
+  "new_features_recomputed_exactly": true,
+  "frozen_protocol_hashes_match": true,
+  "done_reason_observations": {
+    "stop": 3840
+  }
+}

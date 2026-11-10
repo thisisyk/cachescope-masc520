@@ -1,0 +1,7 @@
+{
+  "records": [
+    {"project": "Demo-520", "attributes": {"owner": "Ada Reed", "release date": "2028-06-09", "approved budget": "USD 62000"}},
+    {"project": "Other-101", "attributes": {"owner": "Mia Brooks", "release date": "2028-03-18", "approved budget": "USD 43000"}},
+    {"project": "Other-202", "attributes": {"owner": "Owen Stone", "release date": "2028-09-15", "approved budget": "USD 28000"}}
+  ]
+}

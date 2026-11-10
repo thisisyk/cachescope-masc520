@@ -1,0 +1,25 @@
+{
+  "credential_candidates": [],
+  "credential_candidate_files": 0,
+  "email_like_files": [],
+  "historical_machine_path_files": [
+    {
+      "path": "experiments/v1/run_local.ps1",
+      "category": "historical_machine_path",
+      "matches": 5
+    },
+    {
+      "path": "experiments/v2/run_local.ps1",
+      "category": "historical_machine_path",
+      "matches": 5
+    },
+    {
+      "path": "experiments/v3/run_local.ps1",
+      "category": "historical_machine_path",
+      "matches": 5
+    }
+  ],
+  "suspicious_sensitive_filenames": [],
+  "suspected_values_printed": false,
+  "interpretation": "Pattern scan, not a security guarantee. Synthetic people/project facts are deliberate dataset content. Historical machine paths are retained for byte-preserved provenance; portable commands are in README. Inspect any credential or real-contact candidate before publication."
+}

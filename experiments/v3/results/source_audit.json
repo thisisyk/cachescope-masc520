@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "requested_current_values_independently_recovered": 360,
+  "structured_sources_all_three_current_fields_verified": 135,
+  "prose_sources_queried_current_value_verified": 225,
+  "structure_counts": {
+    "direct": 45,
+    "header": 45,
+    "update": 45,
+    "contrast": 45,
+    "reference": 45,
+    "table": 45,
+    "nested_json": 45,
+    "paired_directory": 45
+  },
+  "calibration_tasks": 160,
+  "test_tasks": 200,
+  "family_splits_disjoint": true,
+  "wording_layout_families": 72,
+  "frozen_source_hashes_match": true,
+  "model_outputs_read": false,
+  "sibling_projects_required": false,
+  "old_new_disjointness": "Recorded by frozen generation_audit.json; not rechecked against absent sibling datasets.",
+  "source_sha256": {
+    "fresh_tasks.jsonl": "2415d5276d6163c1fbe3c3f3f5fb12da875e9483444a750524eef709220c7829",
+    "source_registry.jsonl": "95334cc0442051bc3201bc2448ffc1a6e8ed6220334bc0ea8c8c6b9bede3c7b2"
+  }
+}

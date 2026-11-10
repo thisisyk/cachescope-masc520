@@ -1,0 +1,77 @@
+{
+  "backend": "Ollama /api/generate raw=true",
+  "model": "qwen2.5-coder:0.5b",
+  "model_digest": "4ff64a7f502a08b7616edb8ca0a79eb1853fc363d842b7df4b46915d11a3fb09",
+  "details": {
+    "parent_model": "",
+    "format": "gguf",
+    "family": "qwen2",
+    "families": [
+      "qwen2"
+    ],
+    "parameter_size": "494.03M",
+    "quantization_level": "Q4_K_M",
+    "context_length": 32768,
+    "embedding_length": 896,
+    "runner": "ggml"
+  },
+  "model_info": {
+    "general.architecture": "qwen2",
+    "general.base_model.0.name": "Qwen2.5 Coder 0.5B",
+    "general.base_model.0.organization": "Qwen",
+    "general.base_model.0.repo_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B",
+    "general.base_model.count": 1,
+    "general.basename": "Qwen2.5-Coder",
+    "general.file_type": 15,
+    "general.finetune": "Instruct",
+    "general.languages": [
+      "en"
+    ],
+    "general.license": "apache-2.0",
+    "general.license.link": "https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct/blob/main/LICENSE",
+    "general.parameter_count": 494032768,
+    "general.quantization_version": 2,
+    "general.size_label": "0.5B",
+    "general.tags": [
+      "code",
+      "codeqwen",
+      "chat",
+      "qwen",
+      "qwen-coder",
+      "text-generation"
+    ],
+    "general.type": "model",
+    "qwen2.attention.head_count": 14,
+    "qwen2.attention.head_count_kv": 2,
+    "qwen2.attention.layer_norm_rms_epsilon": 1e-06,
+    "qwen2.block_count": 24,
+    "qwen2.context_length": 32768,
+    "qwen2.embedding_length": 896,
+    "qwen2.feed_forward_length": 4864,
+    "qwen2.rope.freq_base": 1000000,
+    "tokenizer.ggml.add_bos_token": false,
+    "tokenizer.ggml.bos_token_id": 151643,
+    "tokenizer.ggml.eos_token_id": 151645,
+    "tokenizer.ggml.merges": [],
+    "tokenizer.ggml.model": "gpt2",
+    "tokenizer.ggml.padding_token_id": 151643,
+    "tokenizer.ggml.pre": "qwen2",
+    "tokenizer.ggml.token_type": [],
+    "tokenizer.ggml.tokens": []
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 520,
+    "num_predict": 24,
+    "num_ctx": 2048,
+    "num_thread": 4,
+    "stop": [
+      "<|im_end|>",
+      "<|endoftext|>"
+    ]
+  },
+  "system_instruction": "Answer the factual question using only the supplied context. Use the final approved or corrected value when the context updates a fact. Return only the requested value, without explanation. If the answer is absent, return UNKNOWN.",
+  "prompt_template": "Qwen ChatML, explicitly constructed",
+  "observed_at": "2026-11-04T18:34:51.123004+00:00",
+  "python": "3.13.15"
+}

@@ -1,0 +1,220 @@
+{
+  "seed": 1113520,
+  "tasks": 360,
+  "split_counts": {
+    "test": 200,
+    "calibration": 160
+  },
+  "unique_sources": 360,
+  "wording_layout_families": 72,
+  "calibration_families": 32,
+  "test_families": 40,
+  "tasks_per_family": 5,
+  "family_splits_disjoint": true,
+  "wording_inventories_new_to_v3": true,
+  "old_new_task_source_context_disjoint": true,
+  "old_task_records_compared": 1060,
+  "independent_rendered_gold_audit_pass": 360,
+  "no_model_outputs_read": true,
+  "structure_counts": {
+    "direct": 45,
+    "header": 45,
+    "update": 45,
+    "contrast": 45,
+    "reference": 45,
+    "table": 45,
+    "nested_json": 45,
+    "paired_directory": 45
+  },
+  "length_band_counts": {
+    "short": 184,
+    "long": 176
+  },
+  "context_tokens": {
+    "short": {
+      "min": 153,
+      "max": 248
+    },
+    "long": {
+      "min": 511,
+      "max": 633
+    }
+  },
+  "context_tokens_by_structure": {
+    "direct": {
+      "short": {
+        "min": 153,
+        "max": 167
+      },
+      "long": {
+        "min": 511,
+        "max": 524
+      }
+    },
+    "header": {
+      "short": {
+        "min": 157,
+        "max": 172
+      },
+      "long": {
+        "min": 516,
+        "max": 528
+      }
+    },
+    "update": {
+      "short": {
+        "min": 160,
+        "max": 185
+      },
+      "long": {
+        "min": 521,
+        "max": 541
+      }
+    },
+    "contrast": {
+      "short": {
+        "min": 157,
+        "max": 183
+      },
+      "long": {
+        "min": 516,
+        "max": 539
+      }
+    },
+    "reference": {
+      "short": {
+        "min": 195,
+        "max": 219
+      },
+      "long": {
+        "min": 550,
+        "max": 575
+      }
+    },
+    "table": {
+      "short": {
+        "min": 217,
+        "max": 221
+      },
+      "long": {
+        "min": 571,
+        "max": 579
+      }
+    },
+    "nested_json": {
+      "short": {
+        "min": 242,
+        "max": 248
+      },
+      "long": {
+        "min": 623,
+        "max": 633
+      }
+    },
+    "paired_directory": {
+      "short": {
+        "min": 191,
+        "max": 207
+      },
+      "long": {
+        "min": 576,
+        "max": 611
+      }
+    }
+  },
+  "family_assignments": {
+    "direct": {
+      "1": "calibration",
+      "6": "calibration",
+      "3": "calibration",
+      "2": "calibration",
+      "4": "test",
+      "0": "test",
+      "5": "test",
+      "7": "test",
+      "8": "test"
+    },
+    "header": {
+      "2": "calibration",
+      "3": "calibration",
+      "8": "calibration",
+      "0": "calibration",
+      "7": "test",
+      "1": "test",
+      "5": "test",
+      "6": "test",
+      "4": "test"
+    },
+    "update": {
+      "8": "calibration",
+      "3": "calibration",
+      "2": "calibration",
+      "1": "calibration",
+      "4": "test",
+      "7": "test",
+      "5": "test",
+      "0": "test",
+      "6": "test"
+    },
+    "contrast": {
+      "7": "calibration",
+      "0": "calibration",
+      "6": "calibration",
+      "4": "calibration",
+      "5": "test",
+      "1": "test",
+      "8": "test",
+      "2": "test",
+      "3": "test"
+    },
+    "reference": {
+      "5": "calibration",
+      "4": "calibration",
+      "2": "calibration",
+      "1": "calibration",
+      "3": "test",
+      "8": "test",
+      "7": "test",
+      "6": "test",
+      "0": "test"
+    },
+    "table": {
+      "5": "calibration",
+      "7": "calibration",
+      "1": "calibration",
+      "3": "calibration",
+      "2": "test",
+      "0": "test",
+      "8": "test",
+      "4": "test",
+      "6": "test"
+    },
+    "nested_json": {
+      "0": "calibration",
+      "4": "calibration",
+      "8": "calibration",
+      "2": "calibration",
+      "5": "test",
+      "3": "test",
+      "7": "test",
+      "1": "test",
+      "6": "test"
+    },
+    "paired_directory": {
+      "6": "calibration",
+      "3": "calibration",
+      "7": "calibration",
+      "2": "calibration",
+      "0": "test",
+      "5": "test",
+      "1": "test",
+      "8": "test",
+      "4": "test"
+    }
+  },
+  "scope": "Known eight high-level structures; independent new sources and new wording/layout families. Synthetic English owner/date/budget extraction only; not unseen-structure OOD or real long-document benchmark.",
+  "sha256": {
+    "fresh_tasks.jsonl": "2415d5276d6163c1fbe3c3f3f5fb12da875e9483444a750524eef709220c7829",
+    "source_registry.jsonl": "95334cc0442051bc3201bc2448ffc1a6e8ed6220334bc0ea8c8c6b9bede3c7b2"
+  }
+}

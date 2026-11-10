@@ -1,0 +1,544 @@
+{
+  "version": "1.0",
+  "seed": 520,
+  "created_at_utc": "2026-11-04T19:14:15.968565+00:00",
+  "source": "first 50 main-test tasks sorted lexicographically by task_id",
+  "selection_uses_model_outcomes": false,
+  "padding_uses_model_outcomes": false,
+  "prepare_reads": [
+    "data/main_tasks.jsonl",
+    "assets/tokenizer.json",
+    "length_stress.py"
+  ],
+  "supplementary_protocol": true,
+  "padding_rule": "shuffle fixed irrelevant prose with seed 520 + subset index; append whole sentences until context reaches 1000 local Qwen tokens",
+  "appendix_assignment": "alternating sorted-source index; even prefix, odd suffix",
+  "n_paired_derivatives": 50,
+  "n_new_independent_sources": 0,
+  "n_base_test_sources": 50,
+  "n_inherited_template_groups": 10,
+  "appendix_counts": {
+    "prefix": 25,
+    "suffix": 25
+  },
+  "target_context_tokens": 1000,
+  "allowed_context_token_bounds": [
+    900,
+    1100
+  ],
+  "actual_context_token_range": [
+    1000,
+    1013
+  ],
+  "main_tasks_sha256": "a7c7f6a537f2e367fd4bafd089b8250ff43eafbbbe80bd2b24a5dfcca4ce4fbf",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "generator_source_sha256": "ef8b111c17db6d3867d5f871778808b1d5654f53d0e9054c6637563a969d20e7",
+  "stress_tasks_sha256": "4d343e8a4a10ffe395e0253fa5f288f663144d2ac95acb8f25da12d4e9b23c96",
+  "no_training_or_threshold_tuning": true,
+  "threshold_source": "results/selected_thresholds.json from the original main validation set",
+  "inference_settings": "reuse the frozen answering model, prompt and options without changes",
+  "scope": "approximately 1000-context-token synthetic irrelevant-padding stress, not real-world long-document generalization",
+  "dependence": "These reuse 50 existing main-test source facts and inherit their group_id; do not combine them as independent sources with the main test.",
+  "tasks": [
+    {
+      "task_id": "length-task-00002",
+      "base_task_id": "task-00002",
+      "base_source_id": "task-source-00002",
+      "group_id": "main-reference-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1009,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "25f4af1755f27f15dd40daaa5b0361fb3bc7874909a0b5caeff9ec4b374bdb6f"
+    },
+    {
+      "task_id": "length-task-00004",
+      "base_task_id": "task-00004",
+      "base_source_id": "task-source-00004",
+      "group_id": "main-header-06",
+      "appendix_position": "suffix",
+      "context_tokens": 1000,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "31a9ba39aee8c4a7354f008522c7cd9d3487c84b2056cc7d1094ebe3a0639b4f"
+    },
+    {
+      "task_id": "length-task-00005",
+      "base_task_id": "task-00005",
+      "base_source_id": "task-source-00005",
+      "group_id": "main-contrast-04",
+      "appendix_position": "prefix",
+      "context_tokens": 1009,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "858d825bb8c77b2a35dfa91e3cb05f050b937d56302b46dff03ea4dff7d60f1f"
+    },
+    {
+      "task_id": "length-task-00006",
+      "base_task_id": "task-00006",
+      "base_source_id": "task-source-00006",
+      "group_id": "main-contrast-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1002,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "850ca7845fcff4831efedaff90fffa3779aa514283ffdc213bfdfbe27ced308f"
+    },
+    {
+      "task_id": "length-task-00013",
+      "base_task_id": "task-00013",
+      "base_source_id": "task-source-00013",
+      "group_id": "main-direct-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1003,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "f70002c00626446cfb2e8ae10369a1c117da5e9d3327a90af1582c49c93ea12e"
+    },
+    {
+      "task_id": "length-task-00032",
+      "base_task_id": "task-00032",
+      "base_source_id": "task-source-00032",
+      "group_id": "main-reference-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1005,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "a0d309eb1dc5d48a89ba9641911f631ae75f4533c7adaaca982d31cb29bfb9a0"
+    },
+    {
+      "task_id": "length-task-00034",
+      "base_task_id": "task-00034",
+      "base_source_id": "task-source-00034",
+      "group_id": "main-update-03",
+      "appendix_position": "prefix",
+      "context_tokens": 1002,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "ff71bb12b4d9a17fa3af75bf14a6d1e4c1c497ecfe0b62a3744f06877c0b4de9"
+    },
+    {
+      "task_id": "length-task-00041",
+      "base_task_id": "task-00041",
+      "base_source_id": "task-source-00041",
+      "group_id": "main-header-03",
+      "appendix_position": "suffix",
+      "context_tokens": 1002,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "423893f90791e1874b87261476a95753c6a27a31b951e261920f15d13b7d4b95"
+    },
+    {
+      "task_id": "length-task-00044",
+      "base_task_id": "task-00044",
+      "base_source_id": "task-source-00044",
+      "group_id": "main-update-08",
+      "appendix_position": "prefix",
+      "context_tokens": 1008,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "1b02b2c1649022cc4d1a65b1ae9a603ba31ade9ee7373860bf1d129e026b7de3"
+    },
+    {
+      "task_id": "length-task-00049",
+      "base_task_id": "task-00049",
+      "base_source_id": "task-source-00049",
+      "group_id": "main-direct-00",
+      "appendix_position": "suffix",
+      "context_tokens": 1008,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "0d9237cce0d4aeb3cd76c60dcecd38ac6e6cd553ea78e60baf80fc936f26cfee"
+    },
+    {
+      "task_id": "length-task-00052",
+      "base_task_id": "task-00052",
+      "base_source_id": "task-source-00052",
+      "group_id": "main-reference-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1011,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "890a206f7516258a5ff81c3f891ff7482c9e42a9ae3bdc622c3a8cf5023da5b9"
+    },
+    {
+      "task_id": "length-task-00054",
+      "base_task_id": "task-00054",
+      "base_source_id": "task-source-00054",
+      "group_id": "main-header-06",
+      "appendix_position": "suffix",
+      "context_tokens": 1005,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "07d9b0be4994700b2d2a1ecb35ad66637a6f86fdd81e7f595094affb959dc943"
+    },
+    {
+      "task_id": "length-task-00055",
+      "base_task_id": "task-00055",
+      "base_source_id": "task-source-00055",
+      "group_id": "main-contrast-04",
+      "appendix_position": "prefix",
+      "context_tokens": 1001,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "cf049b02dd2fd24ce237227134c2e9af5beb6ed10f017c7d2789279aa2e6162f"
+    },
+    {
+      "task_id": "length-task-00056",
+      "base_task_id": "task-00056",
+      "base_source_id": "task-source-00056",
+      "group_id": "main-contrast-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1007,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "83af3429278efc68f1b7b3bd072d6740dcbb97045807e8ecd505310355bc188a"
+    },
+    {
+      "task_id": "length-task-00063",
+      "base_task_id": "task-00063",
+      "base_source_id": "task-source-00063",
+      "group_id": "main-direct-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1007,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "45ccf5f298af79567f6b080a14a47026d0241356de02768f25e20d60dc243b88"
+    },
+    {
+      "task_id": "length-task-00082",
+      "base_task_id": "task-00082",
+      "base_source_id": "task-source-00082",
+      "group_id": "main-reference-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1013,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "663ce2e81d76d7c9d833b2b26fabe138cd875ceb16f6eafcd79d8d9c214753db"
+    },
+    {
+      "task_id": "length-task-00084",
+      "base_task_id": "task-00084",
+      "base_source_id": "task-source-00084",
+      "group_id": "main-update-03",
+      "appendix_position": "prefix",
+      "context_tokens": 1012,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "bd98e45a422b4afd2d192454f1e80772f07a6210d67346d3bcf0a87de5e0214b"
+    },
+    {
+      "task_id": "length-task-00091",
+      "base_task_id": "task-00091",
+      "base_source_id": "task-source-00091",
+      "group_id": "main-header-03",
+      "appendix_position": "suffix",
+      "context_tokens": 1002,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "f2b46f06e924830999f16a00da67cd4c4ba4637a657f8eb657aa074e96b1fb9a"
+    },
+    {
+      "task_id": "length-task-00094",
+      "base_task_id": "task-00094",
+      "base_source_id": "task-source-00094",
+      "group_id": "main-update-08",
+      "appendix_position": "prefix",
+      "context_tokens": 1002,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "b2f906e97acd998773cb24e14ae0cbab2e009cddf6fffbe0f8a6d8ac8f08e531"
+    },
+    {
+      "task_id": "length-task-00099",
+      "base_task_id": "task-00099",
+      "base_source_id": "task-source-00099",
+      "group_id": "main-direct-00",
+      "appendix_position": "suffix",
+      "context_tokens": 1001,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "5d34f2b07f3fc66799770ef1a6ca0ea47f07e1626f9550e71f3dfa72c3dd30d7"
+    },
+    {
+      "task_id": "length-task-00102",
+      "base_task_id": "task-00102",
+      "base_source_id": "task-source-00102",
+      "group_id": "main-reference-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1007,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "41e016cf8e7f6d0f76ea8fff8d68ffc9255f63d2e3d4f4cb54cc655dda4dc475"
+    },
+    {
+      "task_id": "length-task-00104",
+      "base_task_id": "task-00104",
+      "base_source_id": "task-source-00104",
+      "group_id": "main-header-06",
+      "appendix_position": "suffix",
+      "context_tokens": 1000,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "832eb4a5c1fab611bbf13cf47c580d6956dcf5d9e5616ffda64272e8b325737e"
+    },
+    {
+      "task_id": "length-task-00105",
+      "base_task_id": "task-00105",
+      "base_source_id": "task-source-00105",
+      "group_id": "main-contrast-04",
+      "appendix_position": "prefix",
+      "context_tokens": 1009,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "72c43d9ed01935e762e6ee8e5c2896ead85d85163cdc2d6821351fa8ab4cdb6c"
+    },
+    {
+      "task_id": "length-task-00106",
+      "base_task_id": "task-00106",
+      "base_source_id": "task-source-00106",
+      "group_id": "main-contrast-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1012,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "bc31464f61083141aa7f9f57fddaedf3302f7ff3158a5bcd266b02f51c6505fa"
+    },
+    {
+      "task_id": "length-task-00113",
+      "base_task_id": "task-00113",
+      "base_source_id": "task-source-00113",
+      "group_id": "main-direct-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1010,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "e193882aa929e2e670bad40ef11293b9ecd56b40d8678d763ae5e8480ec024cc"
+    },
+    {
+      "task_id": "length-task-00132",
+      "base_task_id": "task-00132",
+      "base_source_id": "task-source-00132",
+      "group_id": "main-reference-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1005,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "0caeb785e38f356e4a67a6c95334aedcc3a9406672d1b779e6168891f80a3d69"
+    },
+    {
+      "task_id": "length-task-00134",
+      "base_task_id": "task-00134",
+      "base_source_id": "task-source-00134",
+      "group_id": "main-update-03",
+      "appendix_position": "prefix",
+      "context_tokens": 1002,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "34b93324e6414875b05a0766e7847ccd93e9dadf14a17962b80485298269ff25"
+    },
+    {
+      "task_id": "length-task-00141",
+      "base_task_id": "task-00141",
+      "base_source_id": "task-source-00141",
+      "group_id": "main-header-03",
+      "appendix_position": "suffix",
+      "context_tokens": 1007,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "83ec11a8e067315cee0d227eac7a1e1992d4bc7ad2b95fe4ab2d16600c98a87f"
+    },
+    {
+      "task_id": "length-task-00144",
+      "base_task_id": "task-00144",
+      "base_source_id": "task-source-00144",
+      "group_id": "main-update-08",
+      "appendix_position": "prefix",
+      "context_tokens": 1001,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "c1e08a9f9261f66d38a564d185066493f83fa5b809e3fe36383a199d44056276"
+    },
+    {
+      "task_id": "length-task-00149",
+      "base_task_id": "task-00149",
+      "base_source_id": "task-source-00149",
+      "group_id": "main-direct-00",
+      "appendix_position": "suffix",
+      "context_tokens": 1006,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "0031280ac7641dc181d9f7bf793cfe6829daa4c0e963952f0e9a6280e4bd1fce"
+    },
+    {
+      "task_id": "length-task-00152",
+      "base_task_id": "task-00152",
+      "base_source_id": "task-source-00152",
+      "group_id": "main-reference-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1004,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "c957c6af82691de497334f55fc99aed96c4b0362c89d1e66a3ad408976512fec"
+    },
+    {
+      "task_id": "length-task-00154",
+      "base_task_id": "task-00154",
+      "base_source_id": "task-source-00154",
+      "group_id": "main-header-06",
+      "appendix_position": "suffix",
+      "context_tokens": 1002,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "d3be7ab05132621aa09f382098ef8ae1a686300788b56c6b5a31c21abacdf504"
+    },
+    {
+      "task_id": "length-task-00155",
+      "base_task_id": "task-00155",
+      "base_source_id": "task-source-00155",
+      "group_id": "main-contrast-04",
+      "appendix_position": "prefix",
+      "context_tokens": 1004,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "a5bdf6e929362f9f98baf3eff426cb9019cc8d0a121586a49dadcb44cafd178e"
+    },
+    {
+      "task_id": "length-task-00156",
+      "base_task_id": "task-00156",
+      "base_source_id": "task-source-00156",
+      "group_id": "main-contrast-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1004,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "e9d9a42fc29dc7c1882b9d8f8d5829ef4c2d05aabc39515f80c912847d4bf55c"
+    },
+    {
+      "task_id": "length-task-00163",
+      "base_task_id": "task-00163",
+      "base_source_id": "task-source-00163",
+      "group_id": "main-direct-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1001,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "50127f5d5a2328ba593bd1d6337cce508ec39f391e53bbd6221cbb2f29a963e9"
+    },
+    {
+      "task_id": "length-task-00182",
+      "base_task_id": "task-00182",
+      "base_source_id": "task-source-00182",
+      "group_id": "main-reference-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1006,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "8cc42846eda56bea1a44c6ad0f02cc1912293ae78b2dbfab64be77e6895be398"
+    },
+    {
+      "task_id": "length-task-00184",
+      "base_task_id": "task-00184",
+      "base_source_id": "task-source-00184",
+      "group_id": "main-update-03",
+      "appendix_position": "prefix",
+      "context_tokens": 1004,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "ec790075b8e52202f055c4e5bb6c929645b32700a3dda1ae8ff715154c43be59"
+    },
+    {
+      "task_id": "length-task-00191",
+      "base_task_id": "task-00191",
+      "base_source_id": "task-source-00191",
+      "group_id": "main-header-03",
+      "appendix_position": "suffix",
+      "context_tokens": 1013,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "21884f15cf2c8ccffcece2f48268e41cc3d0c2341b7c38e0608c51cfa0c4f0f6"
+    },
+    {
+      "task_id": "length-task-00194",
+      "base_task_id": "task-00194",
+      "base_source_id": "task-source-00194",
+      "group_id": "main-update-08",
+      "appendix_position": "prefix",
+      "context_tokens": 1011,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "c713905f45220baa9407b32dcf1e6b49f1660d5452bac9b8156982db6580d042"
+    },
+    {
+      "task_id": "length-task-00199",
+      "base_task_id": "task-00199",
+      "base_source_id": "task-source-00199",
+      "group_id": "main-direct-00",
+      "appendix_position": "suffix",
+      "context_tokens": 1012,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "4efcf60b3463595c58a887cecfb1da84486798ac4aa420c35e9774047f70ce89"
+    },
+    {
+      "task_id": "length-task-00202",
+      "base_task_id": "task-00202",
+      "base_source_id": "task-source-00202",
+      "group_id": "main-reference-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1001,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "34809a474517d236c0627e2f421cc144ed6678c681a362a6503283a0cb75bd93"
+    },
+    {
+      "task_id": "length-task-00204",
+      "base_task_id": "task-00204",
+      "base_source_id": "task-source-00204",
+      "group_id": "main-header-06",
+      "appendix_position": "suffix",
+      "context_tokens": 1008,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "1a1dca149c0e164b21c145ed098f30f089fd1014e22e501e86d1783ee4336b0c"
+    },
+    {
+      "task_id": "length-task-00205",
+      "base_task_id": "task-00205",
+      "base_source_id": "task-source-00205",
+      "group_id": "main-contrast-04",
+      "appendix_position": "prefix",
+      "context_tokens": 1009,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "896a1ebf88b304a170ca3109b0f81e80e1b726f3324b086905ebda913ff5132d"
+    },
+    {
+      "task_id": "length-task-00206",
+      "base_task_id": "task-00206",
+      "base_source_id": "task-source-00206",
+      "group_id": "main-contrast-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1008,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "49ac38f8d3fda22eda3f51cb6943feea035116b4bc0f7f74a587a9260ea14526"
+    },
+    {
+      "task_id": "length-task-00213",
+      "base_task_id": "task-00213",
+      "base_source_id": "task-source-00213",
+      "group_id": "main-direct-09",
+      "appendix_position": "prefix",
+      "context_tokens": 1010,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "f25902d4b586831a97edc715c56478a6042d88ff948a65c6ab8095e2bdd0f56b"
+    },
+    {
+      "task_id": "length-task-00232",
+      "base_task_id": "task-00232",
+      "base_source_id": "task-source-00232",
+      "group_id": "main-reference-01",
+      "appendix_position": "suffix",
+      "context_tokens": 1005,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "c1d33b32e2dde6528eb15cdc0ed009f9d5f2cf5cdf80dec0c5ef56615b0ccad6"
+    },
+    {
+      "task_id": "length-task-00234",
+      "base_task_id": "task-00234",
+      "base_source_id": "task-source-00234",
+      "group_id": "main-update-03",
+      "appendix_position": "prefix",
+      "context_tokens": 1013,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "0ddf55bbc64180cbd6762e5d112ba020b584d32e4ac1f4c842d6c104ab437b47"
+    },
+    {
+      "task_id": "length-task-00241",
+      "base_task_id": "task-00241",
+      "base_source_id": "task-source-00241",
+      "group_id": "main-header-03",
+      "appendix_position": "suffix",
+      "context_tokens": 1005,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "149ad6ca798cb76311975977728a339ca85b81fb54fbc5ca12f6c61fe9116091"
+    },
+    {
+      "task_id": "length-task-00244",
+      "base_task_id": "task-00244",
+      "base_source_id": "task-source-00244",
+      "group_id": "main-update-08",
+      "appendix_position": "prefix",
+      "context_tokens": 1000,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "1b8a8a478b64d5b34f05325ee8386ecc3e8ce3866cbd7aba5b7054f037697fa0"
+    },
+    {
+      "task_id": "length-task-00249",
+      "base_task_id": "task-00249",
+      "base_source_id": "task-source-00249",
+      "group_id": "main-direct-00",
+      "appendix_position": "suffix",
+      "context_tokens": 1013,
+      "original_source_text_preserved": true,
+      "base_context_sha256": "a8c0843e52dbe7b99c213c8caf87ecddfa7f6d330df0a195905b665654650171"
+    }
+  ]
+}

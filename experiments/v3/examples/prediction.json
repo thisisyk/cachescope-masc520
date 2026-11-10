@@ -1,0 +1,27 @@
+{
+  "primary_policy": "hybrid_frozen_v2_mlp",
+  "policy_is_hybrid": true,
+  "threshold": 0.3045129179954529,
+  "original_input_tokens": 233,
+  "selected": "keep_30",
+  "selected_input_tokens": 79,
+  "selected_context": "{\n\"records\": [\n]\n}",
+  "candidates": [
+    {
+      "candidate_id": "keep_60",
+      "input_tokens": 128,
+      "risk_score": 1.0,
+      "structural_guard_allowed": false,
+      "compressed_context": "{\n\"records\": [\n{\"project\": \"Demo-520\", \"attributes\": {\"owner\": \"Ada Reed\", \"release date\": \"2028-06-09\", \"approved budget\": \"USD 62000\"}},\n]\n}"
+    },
+    {
+      "candidate_id": "keep_30",
+      "input_tokens": 79,
+      "risk_score": 0.19369392096996307,
+      "structural_guard_allowed": true,
+      "compressed_context": "{\n\"records\": [\n]\n}"
+    }
+  ],
+  "answering_model_called": false,
+  "interpretation": "Learned risk plus explicit JSON structural check. Scores are not correctness guarantees."
+}

@@ -1,0 +1,10 @@
+{
+  "repository": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "revision": "ea3f2471cf1b1f0db85067f1ef93848e38e88c25",
+  "source": "https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct",
+  "files": {
+    "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  }
+}

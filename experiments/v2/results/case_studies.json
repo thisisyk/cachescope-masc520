@@ -1,0 +1,144 @@
+{
+  "selection_rule": "First two task_id-sorted primary-MLP decisions in each specified outcome category; all six reported.",
+  "threshold_selected_on": "validation before fresh test evaluation",
+  "cases": [
+    {
+      "category": "harmful_acceptance",
+      "task_id": "v2-new-00137",
+      "task_type": "contrast",
+      "question": "What is the current approved budget for project Redwood Nova-0137?",
+      "gold": "29496",
+      "original_answer": "USD 29496",
+      "selected_answer": "USD 58311",
+      "selected_candidate": "keep_30",
+      "selected_risk_score": 0.30538269877433777,
+      "acceptance_threshold": 0.3100292682647705,
+      "candidate_risk_scores": {
+        "keep_60": 0.4169958233833313,
+        "keep_30": 0.30538269877433777
+      },
+      "original_context_tokens": 161,
+      "selected_context_tokens": 36,
+      "original_full_prompt_tokens": 237,
+      "selected_full_prompt_tokens": 112,
+      "source_excerpt": "For project Redwood Nova-0137, the approved budget is not USD 58311. The verified value is USD 29496.",
+      "selected_excerpt": "For project Redwood Nova-0137, the approved budget is not USD 58311.\nThe verified value is USD 29496.",
+      "observation": "Both the rejected amount and the verified current amount remain in the selected text. The compressed answer returns the rejected amount. Gold deletion is therefore not the observed failure here; the response does not follow the retained negation and verification statements. The precise reason the answer changes is unestablished."
+    },
+    {
+      "category": "harmful_acceptance",
+      "task_id": "v2-new-00155",
+      "task_type": "contrast",
+      "question": "What is the current approved budget for project Sequoia Nova-0155?",
+      "gold": "54576",
+      "original_answer": "USD 54576",
+      "selected_answer": "USD 55576",
+      "selected_candidate": "keep_30",
+      "selected_risk_score": 0.10748276114463806,
+      "acceptance_threshold": 0.3100292682647705,
+      "candidate_risk_scores": {
+        "keep_60": 0.4583895802497864,
+        "keep_30": 0.10748276114463806
+      },
+      "original_context_tokens": 159,
+      "selected_context_tokens": 34,
+      "original_full_prompt_tokens": 236,
+      "selected_full_prompt_tokens": 111,
+      "source_excerpt": "An audit of Sequoia Nova-0155 accepted USD 54576 for the approved budget and rejected USD 55510.",
+      "selected_excerpt": "An audit of Sequoia Nova-0155 accepted USD 54576 for the approved budget and rejected USD 55510.",
+      "observation": "The selected text retains the entire target audit statement, including the accepted and rejected amounts. The response USD 55576 matches neither amount in that statement. This is an observed answering error despite retained evidence; the experiment does not establish its mechanism."
+    },
+    {
+      "category": "original_wrong_selected_correct",
+      "task_id": "v2-new-00029",
+      "task_type": "direct",
+      "question": "What is the current approved budget for project Elm Nova-0029?",
+      "gold": "39966",
+      "original_answer": "24600",
+      "selected_answer": "USD 39966",
+      "selected_candidate": "keep_60",
+      "selected_risk_score": 0.2961403429508209,
+      "acceptance_threshold": 0.3100292682647705,
+      "candidate_risk_scores": {
+        "keep_60": 0.2961403429508209,
+        "keep_30": 0.36074772477149963
+      },
+      "original_context_tokens": 486,
+      "selected_context_tokens": 275,
+      "original_full_prompt_tokens": 561,
+      "selected_full_prompt_tokens": 350,
+      "source_excerpt": "Project Aster Side-0029-00 has owner Hugo Carter, release date 2027-10-04, and approved budget USD 24600.\nIn its authorized project file, Elm Nova-0029 records USD 39966 for the approved budget.",
+      "selected_excerpt": "Project Aster Side-0029-00 has owner Hugo Carter, release date 2027-10-04, and approved budget USD 24600.\nIn its authorized project file, Elm Nova-0029 records USD 39966 for the approved budget.",
+      "observation": "The original response equals the budget of Aster Side-0029-00, an unrelated project. The selected context still includes that distractor and the target sentence, but the selected answer now matches the target. Compression and the output change co-occur; this single observation does not isolate a causal mechanism."
+    },
+    {
+      "category": "original_wrong_selected_correct",
+      "task_id": "v2-new-00030",
+      "task_type": "direct",
+      "question": "What is the current owner for project Larch Nova-0030?",
+      "gold": "Lena Wells",
+      "original_answer": "Iris Carter",
+      "selected_answer": "Lena Wells",
+      "selected_candidate": "keep_30",
+      "selected_risk_score": 0.03525707125663757,
+      "acceptance_threshold": 0.3100292682647705,
+      "candidate_risk_scores": {
+        "keep_60": 0.3056502938270569,
+        "keep_30": 0.03525707125663757
+      },
+      "original_context_tokens": 148,
+      "selected_context_tokens": 21,
+      "original_full_prompt_tokens": 223,
+      "selected_full_prompt_tokens": 96,
+      "source_excerpt": "Project Kestrel Side-0030-02 has owner Iris Carter, release date 2027-11-15, and approved budget USD 62764.\nOne finalized record specifies the following for Larch Nova-0030: owner = Lena Wells.",
+      "selected_excerpt": "One finalized record specifies the following for Larch Nova-0030: owner = Lena Wells.",
+      "observation": "The original response names the owner of Kestrel Side-0030-02. The selected context contains the target owner statement alone and the response is correct. This is a genuine observed improvement, not evidence that compression always improves answering."
+    },
+    {
+      "category": "original_wrong_selected_wrong",
+      "task_id": "v2-new-00027",
+      "task_type": "direct",
+      "question": "What is the current owner for project Acacia Nova-0027?",
+      "gold": "Noah Hayes",
+      "original_answer": "Liam Grant",
+      "selected_answer": "Liam Grant",
+      "selected_candidate": "original",
+      "selected_risk_score": null,
+      "acceptance_threshold": 0.3100292682647705,
+      "candidate_risk_scores": {
+        "keep_60": 0.36652928590774536,
+        "keep_30": 0.3510582745075226
+      },
+      "original_context_tokens": 482,
+      "selected_context_tokens": 482,
+      "original_full_prompt_tokens": 557,
+      "selected_full_prompt_tokens": 557,
+      "source_excerpt": "In its authorized project file, Acacia Nova-0027 records Noah Hayes for the owner.\nProject Spruce Side-0027-09 has owner Liam Grant, release date 2027-06-26, and approved budget USD 78990.",
+      "selected_excerpt": "In its authorized project file, Acacia Nova-0027 records Noah Hayes for the owner.\nProject Spruce Side-0027-09 has owner Liam Grant, release date 2027-06-26, and approved budget USD 78990.",
+      "observation": "Both candidate scores exceed the frozen threshold, so the policy keeps the full original context. Its incorrect owner matches a different project. The target owner statement is present. Rejecting compression preserves this existing answering error rather than repairing it."
+    },
+    {
+      "category": "original_wrong_selected_wrong",
+      "task_id": "v2-new-00091",
+      "task_type": "update",
+      "question": "What is the current release date for project Tern Nova-0091?",
+      "gold": "2027-09-06",
+      "original_answer": "2027-05-28",
+      "selected_answer": "2027-05-28",
+      "selected_candidate": "original",
+      "selected_risk_score": null,
+      "acceptance_threshold": 0.3100292682647705,
+      "candidate_risk_scores": {
+        "keep_60": 0.3323979079723358,
+        "keep_30": 0.47264987230300903
+      },
+      "original_context_tokens": 505,
+      "selected_context_tokens": 505,
+      "original_full_prompt_tokens": 581,
+      "selected_full_prompt_tokens": 581,
+      "source_excerpt": "Project Tern Nova-0091 once listed 2027-05-28 as its release date. The final approved correction replaces it with 2027-09-06.",
+      "selected_excerpt": "Project Tern Nova-0091 once listed 2027-05-28 as its release date. The final approved correction replaces it with 2027-09-06.",
+      "observation": "The policy rejects both candidates and retains the original. The answer repeats the explicitly obsolete release date even though the approved correction remains present. A pre-answer compression-risk gate does not itself fix the original answering model."
+    }
+  ]
+}

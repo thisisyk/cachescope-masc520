@@ -1,0 +1,13 @@
+{
+  "v1_files": {
+    "data\\main_candidates.jsonl": "b55bd9dd336d5dde8a5125b65aa0f4215c5173b5dfde0a7f12ef5891dfab4a62",
+    "data\\structural_holdout_candidates.jsonl": "206d8c065437b655d3067893b45b0810e7ba3514d03d1a7757f5b849a204fae4",
+    "data\\length_stress_candidates.jsonl": "755dfd98ea6ffbe317bb61076f51127fe5f0002b051e523da4a9dc69656d9c0d"
+  },
+  "development_rows": 1200,
+  "task_records": 600,
+  "all_v1_data_is_development": true,
+  "v1_test_no_longer_held_out_in_v2": true,
+  "v1_pilot_excluded": true,
+  "paired_length_sources_not_independent": true
+}
